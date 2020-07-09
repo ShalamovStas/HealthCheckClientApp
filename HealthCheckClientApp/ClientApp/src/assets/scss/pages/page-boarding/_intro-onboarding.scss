@@ -1,0 +1,19 @@
+.intro-onboarding {
+  padding-top: 120px;
+  padding-bottom: 100px;
+
+  @include media(">=medium") {
+    padding-top: 130px;
+  }
+  @include media(">=xlarge") {
+    padding-top: 160px;
+  }
+
+
+  .intro__img-holder {
+    @media screen and (min-width: 1350px) {
+      top: 40px;
+      transform: translateY(0);
+    }
+  }
+}

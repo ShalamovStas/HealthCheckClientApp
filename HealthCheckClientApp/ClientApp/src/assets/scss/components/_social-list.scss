@@ -1,0 +1,22 @@
+.social-list {
+  display: flex;
+  margin-bottom: 40px;
+}
+
+.social-list__item {
+  &:not(:last-child) {
+    margin-right: 20px;
+    @include media(">=xlarge") {
+      margin-right: 24px;
+    }
+  }
+}
+
+.social-list__link {
+  @include size(60px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}

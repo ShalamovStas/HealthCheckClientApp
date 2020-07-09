@@ -1,0 +1,83 @@
+.custom-checkbox-label {
+  $size: 24px;
+
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  align-items: center;
+  margin: 0;
+  width: $size;
+  height: $size;
+  flex: 0 0 $size;
+  user-select: none;
+  cursor: pointer;
+
+  .common-checkbox:checked ~ .custom-checkbox {
+    border-color: $primary;
+    &:after {
+      display: block;
+      border-color: $primary;
+    }
+  }
+}
+
+.custom-checkbox-label__active {
+  .custom-checkbox {
+    border-color: $primary;
+    .custom-after {
+      display: block;
+      border-color: $primary;
+    }
+  }
+}
+
+.common-checkbox {
+  width: 0;
+  height: 0;
+  margin: 0;
+  opacity: 0;
+}
+
+.custom-checkbox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: solid 1px $checkbox-border-color;
+  background-color: $white;
+  border-radius: $checkbox-border-radius;
+
+  &:after {
+    content: "";
+    position: absolute;
+    display: none;
+    left: 50%;
+    top: 45%;
+    width: 8px;
+    height: 13px;
+    border: solid $primary;
+    border-width: 0 2px 2px 0;
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+}
+
+.custom-after {
+  position: absolute;
+  display: none;
+  left: 50%;
+  top: 45%;
+  width: 8px;
+  height: 13px;
+  border: solid $primary;
+  border-width: 0 2px 2px 0;
+  transform: translate(-50%, -50%) rotate(45deg);
+
+  &.custom-after--active {
+    display: block;
+  }
+}
+
+
+
+

@@ -1,0 +1,37 @@
+.btn-user {
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  font-size: $base-font-size;
+}
+
+.btn-user__text {
+  display: none;
+
+  @include media(">=xlarge") {
+    display: block;
+  }
+}
+
+.btn-user__img {
+  @include size(32px);
+
+  padding-top: 5px;
+  background-color: $primary;
+  border-radius: 50%;
+
+  @include media(">=medium") {
+    @include size(42px);
+
+    padding-top: 6px;
+  }
+
+  @include media(">=xlarge") {
+    @include size(52px);
+
+    padding-top: 7px;
+    margin-left: 20px;
+  }
+}
+

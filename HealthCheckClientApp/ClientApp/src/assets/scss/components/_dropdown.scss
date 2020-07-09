@@ -1,0 +1,161 @@
+.dropdown {
+  position: relative;
+
+  button {
+    &:active {
+      color: $body-color;
+    }
+  }
+}
+
+.header__dropdown--active,
+.dropdown-language--active {
+  .dropdown__menu {
+    display: block;
+  }
+}
+
+.dropdown__menu {
+  display: none;
+  position: absolute;
+  z-index: 100;
+  background-color: $white;
+  box-shadow: $shadow;
+  border-radius: $border-radius;
+
+  &:after {
+    @include size(15px);
+
+    content: "";
+    position: absolute;
+    top: 100%;
+    right: 25px;
+    z-index: -1;
+    background-color: $white;
+    box-shadow: $shadow;
+    transform: translateY(-50%) rotate(45deg);
+  }
+}
+
+.header__dropdown {
+  margin-right: 16px;
+  @include media(">=medium") {
+    margin-right: 0;
+  }
+}
+
+.dropdown-language__menu {
+  bottom: 45px;
+  right: 0;
+  z-index: 10;
+
+  &:after {
+    border-bottom-right-radius: $border-radius;
+  }
+}
+
+.dropdown__btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  color: $black;
+  font-size: $font-size-medium;
+  background-color: $white;
+  border: 0;
+  border-radius: $border-radius;
+
+  @include media(">=xlarge") {
+    font-size: $base-font-size;
+  }
+}
+
+.dropdown-language__btn {
+  padding: 16px 30px 16px 40px;
+
+  @include media(">=medium") {
+    padding: 16px 50px;
+  }
+
+  .custom-after {
+    top: 50%;
+    left: 20px;
+    @include media(">=medium") {
+      left: 26px;
+    }
+  }
+}
+
+.dropdown-language__btn--active {
+  .custom-after {
+    display: block;
+  }
+}
+
+.dropdown__item {
+  &:not(:last-child) {
+    border-bottom: 1px solid $bg-body;
+  }
+}
+
+.btn-language {
+  display: flex;
+  align-items: center;
+  padding: 0;
+
+  font-size: $font-size-small;
+  background-color: transparent;
+  border: 0;
+
+  @include media(">=xlarge") {
+    font-size: $font-size-additional;
+  }
+}
+
+.btn-language__icon {
+  margin-left: 10px;
+  fill: $primary;
+}
+
+.dropdown-user__menu {
+  display: none;
+  position: absolute;
+  top: 60px;
+  right: -15px;
+  min-width: 240px;
+  background-color: $white;
+  box-shadow: $shadow;
+  border-radius: $border-radius;
+
+  @include media(">=medium") {
+    top: 70px;
+    right: -10px;
+  }
+
+  @include media(">=xlarge") {
+    top: 80px;
+    right: -5px;
+  }
+
+  &:after {
+    top: 0;
+    right: 25px;
+    border-top-left-radius: $border-radius;
+  }
+}
+
+.dropdown-user__btn {
+  padding: 17px 20px 17px 64px;
+
+  @include media(">=medium") {
+    padding-right: 70px;
+  }
+
+  .icon {
+    position: absolute;
+    top: 50%;
+    left: 24px;
+    font-size: 20px;
+    transform: translateY(-50%);
+  }
+}

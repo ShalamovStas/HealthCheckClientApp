@@ -1,0 +1,52 @@
+.editor-profile__main {
+  .intro__inner {
+    @include media(">=xlarge") {
+      padding-bottom: 222px;
+    }
+  }
+}
+
+.edit-profile__title {
+  margin-bottom: 60px;
+  @include media(">=xlarge") {
+    margin-bottom: 100px;
+  }
+}
+
+.edit-profile__form {
+  @include media(">=medium") {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.form-group-col--right-indent {
+  @include media(">=medium") {
+    margin-right: 22px;
+  }
+  @media screen and (min-width: 1450px) {
+    margin-right: 87px;
+  }
+}
+
+.form-group-col {
+  @include media(">=medium") {
+    flex: 0 0 50%;
+  }
+  @include media(">=xlarge"){
+    flex: auto;
+  }
+
+  .form-group {
+    @media screen and (min-width: 1450px) {
+      width: 400px;
+    }
+  }
+}
+
+.form-group--bottom-indent {
+  margin-bottom: 40px;
+  @include media(">=medium") {
+    margin-bottom: 60px;
+  }
+}

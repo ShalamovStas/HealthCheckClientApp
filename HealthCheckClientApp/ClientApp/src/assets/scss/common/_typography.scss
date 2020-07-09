@@ -1,0 +1,63 @@
+// Typography
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6,
+.h {
+  font-family: $base-font-family;
+  color: $color-main-title;
+}
+
+h1, .h1 {
+  font-size: $h1-font-size;
+  font-weight: 800;
+  line-height: 1.12;
+}
+
+h2, .h2 {
+  font-size: $h2-font-size;
+  font-weight: 800;
+  line-height: 30px;
+}
+
+h3, .h3 {
+  font-size: $h3-font-size;
+  font-weight: normal;
+  line-height: 1.5;
+}
+
+h4, .h4 {
+  font-size: $h4-font-size;
+  font-weight: 600;
+}
+
+p {
+  margin: 0 0 1em;
+}
+
+.text-holder {
+  font-size: $base-font-size;
+  @include media(">=xlarge") {
+    font-size: 24px;
+  }
+}
+
+a {
+  @include multi-transition($animation-speed, color, background-color);
+  &:not([class]) {
+    color: $primary;
+    &:hover {
+      color: $primary;
+      text-decoration: none;
+    }
+  }
+}
+
+a, button, img, input {
+  &:focus {
+    outline: 1px dotted transparent;
+  }
+}

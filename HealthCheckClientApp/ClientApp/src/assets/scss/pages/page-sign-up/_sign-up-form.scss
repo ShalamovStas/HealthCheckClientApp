@@ -1,0 +1,118 @@
+.form-group--error {
+  .form-group__label {
+    color: $danger;
+  }
+
+  .form-control {
+    border-color: $danger;
+  }
+
+  .form-text {
+    display: block !important;
+  }
+
+  .form-group__label--password {
+    display: none;
+  }
+
+  .form-group__label--error {
+    display: block;
+  }
+}
+
+.form-group__label--error {
+  display: none;
+}
+
+.sign-up__form {
+  @include media(">=medium") {
+    display: grid;
+    grid-template-columns: 6fr 6fr;
+    align-items: start;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+
+  @include media(">=xlarge") {
+    grid-template-columns: 4fr 4fr 4fr;
+  }
+
+  .form-text {
+    display: none;
+  }
+
+  .form-group {
+    @include media(">=medium") {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+    @include media(">=xlarge") {
+      flex: 1 0 400px;
+      max-width: 400px;
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}
+
+.form-group-wrap {
+  @include media(">=xlarge") {
+    &:not(:last-child) {
+      margin-right: 50px;
+    }
+  }
+}
+
+.form-group-wrap-2 {
+  @include media(">=xlarge") {
+    grid-column: 2;
+    grid-row: 1;
+  }
+}
+
+.form-group-wrap-3 {
+  @include media(">=medium") {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  @include media(">=xlarge") {
+    grid-column: 2;
+    grid-row: 1;
+    transform: translateY(100%);
+  }
+}
+
+.form-group-wrap-4 {
+  @include media(">=medium") {
+    transform: translateY(-107px);
+  }
+  @include media(">=xlarge") {
+    grid-row: 1;
+    grid-column: 3;
+    transform: translateY(0);
+  }
+}
+
+.sign-up__form-text {
+  font-size: $font-size-small;
+  margin-left: 12px;
+
+  @include media(">=xlarge") {
+    font-size: $font-size-additional;
+  }
+}
+
+.form-group-accept {
+  margin-bottom: 60px;
+
+  @include media(">=medium") {
+    margin-bottom: 80px;
+  }
+
+  @include media(">=xlarge") {
+    margin-bottom: 112px;
+  }
+}

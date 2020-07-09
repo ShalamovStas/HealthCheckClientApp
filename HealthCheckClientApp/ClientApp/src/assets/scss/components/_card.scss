@@ -1,0 +1,16 @@
+.card {
+  position: relative;
+  max-width: 953px;
+  min-height: 464px;
+  background-color: $white;
+  border-radius: $border-radius-modal;
+  box-shadow: $shadow;
+  overflow: hidden;
+
+  @include media(">=medium") {
+    min-height: 560px;
+  }
+  @include media(">=xlarge") {
+    min-height: 598px;
+  }
+}

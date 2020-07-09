@@ -1,0 +1,111 @@
+$icomoon-font-family: "icomoon";
+$icomoon-font-path: "../fonts/icomoon" !default;
+
+$icon-twitter: "\e906";
+$icon-apple: "\e907";
+$icon-arrow-down: "\e908";
+$icon-arrow-left: "\e909";
+$icon-add: "\e90a";
+$icon-close: "\e90b";
+$icon-arrow-dropdown: "\e90c";
+$icon-share: "\e90d";
+$icon-language: "\e90e";
+$icon-download: "\e90f";
+$icon-calendar: "\e910";
+$icon-person: "\e911";
+$icon-folder: "\e912";
+$icon-log-out: "\e913";
+$icon-password: "\e914";
+$icon-pencil: "\e915";
+$icon-hide: "\e916";
+$icon-show: "\e917";
+$icon-warning: "\e918";
+$icon-facebook: "\e919";
+
+@font-face {
+  font-family: $icomoon-font-family;
+  src:
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?4a5sly') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?4a5sly') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?4a5sly##{$icomoon-font-family}') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+.icon {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: $icomoon-font-family !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+.icon-twitter:before {
+  content: $icon-twitter;
+}
+.icon-apple:before {
+  content: $icon-apple;
+}
+.icon-arrow-down:before {
+  content: $icon-arrow-down;
+}
+.icon-arrow-left:before {
+  content: $icon-arrow-left;
+}
+.icon-add:before {
+  content: $icon-add;
+}
+.icon-close:before {
+  content: $icon-close;
+}
+.icon-arrow-dropdown:before {
+  content: $icon-arrow-dropdown;
+}
+.icon-share:before {
+  content: $icon-share;
+}
+.icon-language:before {
+  content: $icon-language;
+}
+.icon-download:before {
+  content: $icon-download;
+}
+.icon-calendar:before {
+  content: $icon-calendar;
+}
+.icon-person:before {
+  content: $icon-person;
+}
+.icon-folder:before {
+  content: $icon-folder;
+}
+.icon-log-out:before {
+  content: $icon-log-out;
+}
+.icon-password:before {
+  content: $icon-password;
+}
+.icon-pencil:before {
+  content: $icon-pencil;
+}
+.icon-hide:before {
+  content: $icon-hide;
+}
+.icon-show:before {
+  content: $icon-show;
+}
+.icon-warning:before {
+  content: $icon-warning;
+}
+.icon-facebook:before {
+  content: $icon-facebook;
+}

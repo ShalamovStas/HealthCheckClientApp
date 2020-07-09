@@ -1,0 +1,49 @@
+@import "dropdown-profile";
+
+.intro__inner-profile {
+  @include media(">=medium") {
+    max-width: 953px;
+  }
+}
+
+.link-edit__text {
+  display: none;
+  @include media(">=medium") {
+    display: inline-flex;
+    margin-left: 15px;
+    font-size: $font-size-medium;
+  }
+  @include media(">=xlarge") {
+    font-size: $base-font-size;
+  }
+}
+
+.tabs-list__description-text {
+  margin-bottom: 20px;
+  @include media(">medium") {
+    margin-bottom: 40px;
+  }
+}
+
+
+.tabs-list {
+  .btn-additional {
+    .icon {
+      margin-right: 10px;
+    }
+  }
+}
+
+.tabs-list__additional-block {
+  display: none;
+}
+
+
+.tabs-list__description--active {
+  .btn-additional {
+    display: none;
+  }
+  .tabs-list__additional-block {
+    display: block;
+  }
+}

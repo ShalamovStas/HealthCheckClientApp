@@ -1,0 +1,242 @@
+<main class ="">
+
+  <div class="intro">
+    <div class="container">
+      <div class="intro__inner-indent">
+        <h2 class="secondary-title">Sign up</h2>
+        <span class="sub-text">Autofill forms using social networks:</span>
+        <ul class="social-list">
+          <li class="social-list__item">
+            <a class="social-list__link bg-white" href="#"><span class="icon icon-facebook facebook-bg"></span></a>
+          </li>
+          <li class="social-list__item">
+            <a class="social-list__link bg-white" href="#">
+              <img src="../../assets/images/svg-icons/icon_google.svg" alt="icon google logo">
+            </a>
+          </li>
+          <li class="social-list__item">
+            <a class="social-list__link bg-white" href="#"><span class="icon icon-twitter twitter-bg"></span></a>
+          </li>
+          <li class="social-list__item">
+            <a class="social-list__link bg-white" href="#"><span class="icon icon-apple apple-bg"></span></a>
+          </li>
+        </ul>
+
+        <form class="sign-up__form" name="signUpForm">
+
+          <div class="form-group-wrap form-group-wrap-1">
+            <div class="form-group">
+              <label class="form-group__label" for="email">Email</label>
+              <input type="email" class="form-control" id="email" name="email">
+              <small class="form-text">Please enter your email address in format yourname@example.com</small>
+            </div>
+
+            <div class="form-group">
+              <label class="form-group__label form-group__label--password" for="password">Password</label>
+              <label class="form-group__label form-group__label--password form-group__label--error" for="password">Weak password</label>
+
+              <div class="input-holder">
+                <input type="password" class="form-control" id="password" name="password">
+                <button class="btn-show-password btn-reset btn-show-password-js" type="button"></button>
+              </div>
+              <small class="form-text">Please use at least 8 characters</small>
+            </div>
+
+            <div class="form-group">
+              <label class="form-group__label" for="phone">Phone</label>
+              <input type="tel" class="form-control" id="phone" name="phone">
+            </div>
+          </div>
+
+          <div class="form-group-wrap form-group-wrap-2">
+            <div class="form-group">
+              <label class="form-group__label" for="firstName">First Name</label>
+              <input type="text" class="form-control" id="firstName" name="firstName">
+            </div>
+
+            <div class="form-group">
+              <label class="form-group__label" for="lastName">Last Name</label>
+              <input type="text" class="form-control" id="lastName" name="lastName">
+            </div>
+          </div>
+
+          <div class="form-group-wrap form-group-wrap-3">
+            <div class="form-group">
+              <label class="form-group__label">Sex</label>
+
+              <div class="select select-js">
+                <button class="select__current btn-reset select__current-js" type="button">Select sex</button>
+                <div class="list-wrap">
+                  <ul class="select__body">
+                    <li class="select__option">
+                      <button class="select__btn btn-reset" type="button">Male</button>
+                    </li>
+                    <li class="select__option">
+                      <button class="select__btn btn-reset" type="button">Female</button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- need to change to datepicker -->
+            <div class="form-group">
+              <label class="form-group__label">Date of birth</label>
+
+              <div class="select select-datepicker select-js">
+                <button class="select__current btn-reset select__current-js" type="button">Select date</button>
+                <div class="list-wrap">
+                  <ul class="select__body">
+                    <li class="select__option">
+                      <button class="select__btn btn-reset" type="button">USA</button>
+                    </li>
+                    <li class="select__option">
+                      <button class="select__btn btn-reset" type="button">Ukraine</button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- need to change to datepicker -->
+          </div>
+
+
+          <div class="form-group-wrap form-group-wrap-4">
+            <div class="form-group">
+              <label class="form-group__label">Country</label>
+
+              <div class="select select-js">
+                <button class="select__current btn-reset select__current-js" type="button">Select country</button>
+                <div class="list-wrap">
+                  <ul class="select__body scroll-bar">
+                    <li class="select__option">
+                      <button class="select__btn btn-reset" type="button">Tuvalu</button>
+                    </li>
+                    <li class="select__option">
+                      <button class="select__btn btn-reset" type="button">Uganda</button>
+                    </li>
+                    <li class="select__option">
+                      <button class="select__btn btn-reset" type="button">Ukraine</button>
+                    </li>
+                    <li class="select__option">
+                      <button class="select__btn btn-reset" type="button">United Arab Emirates</button>
+                    </li>
+                    <li class="select__option">
+                      <button class="select__btn btn-reset" type="button">United Kingdom</button>
+                    </li>
+                    <li class="select__option">
+                      <button class="select__btn btn-reset" type="button">United States</button>
+                    </li>
+                    <li class="select__option">
+                      <button class="select__btn btn-reset" type="button">Uruguay</button>
+                    </li>
+                    <li class="select__option">
+                      <button class="select__btn btn-reset" type="button">Uzbekistan</button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group hide-block">
+              <label class="form-group__label">State</label>
+
+              <div class="select select-js">
+                <button class="select__current btn-reset select__current-js" type="button">Select state</button>
+                <div class="list-wrap">
+                  <ul class="select__body scroll-bar">
+                    <li class="select__option">
+                      <button class="select__btn btn-reset" type="button">Alabama</button>
+                    </li>
+                    <li class="select__option">
+                      <button class="select__btn btn-reset" type="button">Alaska</button>
+                    </li>
+                    <li class="select__option">
+                      <button class="select__btn btn-reset" type="button">Kansas</button>
+                    </li>
+                    <li class="select__option">
+                      <button class="select__btn btn-reset" type="button">Minnesota</button>
+                    </li>
+                    <li class="select__option">
+                      <button class="select__btn btn-reset" type="button">Texas</button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="form-group-accept">
+                <label class="form-group__label" for="facilityCode">Facility code</label>
+                <input type="text" class="form-control" id="facilityCode" name="facilityCode">
+                <div class="d-flex align-items-center">
+                  <label class="custom-checkbox-label">
+                    <input class="common-checkbox" type="checkbox">
+                    <span class="custom-checkbox"></span>
+                  </label>
+                  <div class="sign-up__form-text">I accept HealthCheck’s <button
+                    class="btn-privacy btn-reset text-primary font-weight-semi btn-privacy-js"
+                    type="button" (click)="openModalPrivacy()">Terms and Conditions</button> and
+                    <button class="btn-privacy btn-reset text-primary font-weight-semi btn-privacy-js"
+                            type="button" (click)="openModalPrivacy()">Privacy Policy</button>
+                  </div>
+                </div>
+              </div>
+              <div class="btn-holder mt-0 mb-0">
+                <button class="btn btn-primary mb-2" type="submit">Sign up</button>
+                <div class="form-subtext">
+                  <span>Already have an account?&nbsp;</span><a class="text-primary"  routerLink="/login">Sign in</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </form>
+
+      </div>
+    </div>
+
+  </div>
+
+  <div class="modal modal-verify">
+    <div class="modal__content">
+      <div class="modal__header">
+        <button class="modal-close btn-reset modal-close-js" type="button"></button>
+      </div>
+      <div class="modal__body">
+        <h2 class="modal__title secondary-title">Email verified!</h2>
+        <div class="text-holder">
+          <span class="d-block">You verified your e-mail successfully.</span>
+          <span class="d-block">You can start using HealthCheck after you sign in.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal modal-privacy">
+    <div class="modal__content">
+      <div class="modal__header">
+        <button class="modal-close btn-reset modal-close-js" type="button"  (click)="closeModalPrivacy()"></button>
+      </div>
+      <div class="modal__body scroll-bar">
+        <h2 class="modal__title secondary-title">Privacy Policy</h2>
+        <div class="text-holder modal__text-holder">
+          <span class="modal__text">Learn more about how HealthCheck collects and uses data and your rights
+            as a HealthCheck user.</span>
+          <span class="modal__subtext text-secondary">Updated October 4, 2019</span>
+        </div>
+        <h5 class="modal__subtitle font-weight-semi">Overview</h5>
+        <p class="sub-text">Stratum Health Solutions, LLC (“HealthCheck”, “we”, “us” or “our”) is committed to protecting the
+          privacy
+          of personal information (i.e. any information relating to an identified or identifiable natural person) who visit the https://www.stratumhealth.io website and HealthCheck mobile software application (collectively, the “Site”) and use the services available thereon (the “Services”). Amendments to this Privacy Policy will be posted to the Site and/or Services and will be effective when posted. Your continued use of the Site and/or Services following the posting of any amendment to this Privacy Policy shall constitute your acceptance of such amendment.</p>
+        <p class="sub-text">Stratum Health Solutions, LLC (“HealthCheck”, “we”, “us” or “our”) is committed to protecting the
+          privacy
+          of personal information (i.e. any information relating to an identified or identifiable natural person) who visit the https://www.stratumhealth.io website and HealthCheck mobile software application (collectively, the “Site”) and use the services available thereon (the “Services”). Amendments to this Privacy Policy will be posted to the Site and/or Services and will be effective when posted. Your continued use of the Site and/or Services following the posting of any amendment to this Privacy Policy shall constitute your acceptance of such amendment.</p>
+        <p class="sub-text">Stratum Health Solutions, LLC (“HealthCheck”, “we”, “us” or “our”) is committed to protecting the
+          privacy
+          of personal information (i.e. any information relating to an identified or identifiable natural person) who visit the https://www.stratumhealth.io website and HealthCheck mobile software application (collectively, the “Site”) and use the services available thereon (the “Services”). Amendments to this Privacy Policy will be posted to the Site and/or Services and will be effective when posted. Your continued use of the Site and/or Services following the posting of any amendment to this Privacy Policy shall constitute your acceptance of such amendment.</p>
+      </div>
+    </div>
+  </div>
+
+</main>

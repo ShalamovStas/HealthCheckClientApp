@@ -1,0 +1,35 @@
+<header class="header">
+  <div class="container">
+    <div class="header__inner">
+      <a class="logo" routerLink="/">
+        <img src="../../assets/images/svg-icons/logo_healthcheck.svg" alt="blue heart near the black text - HealthCheck">
+      </a>
+      <div class="dropdown header__dropdown">
+        <button class="btn-user btn-reset btn-user-js" type="button">
+          <span class="btn-user__text">Sally Johnson</span>
+          <img class="btn-user__img" src="../../assets/images/img_girl.png" alt="icon person">
+        </button>
+        <ul class="dropdown__menu dropdown-user__menu dropdown-user__menu-js">
+          <li class="dropdown__item">
+            <a routerLink="/profile" class="dropdown__btn dropdown-user__btn">
+              <span class="icon icon-person text-primary"></span>
+              My profile
+            </a>
+          </li>
+          <li class="dropdown__item">
+            <a routerLink="/profile" class="dropdown__btn dropdown-user__btn">
+              <span class="icon icon-folder text-primary"></span>
+              My results
+            </a>
+          </li>
+          <li class="dropdown__item">
+            <button class="dropdown__btn dropdown-user__btn" type="button" (click) = "logout()">
+              <span class="icon icon-log-out"></span>
+              Log out
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</header>

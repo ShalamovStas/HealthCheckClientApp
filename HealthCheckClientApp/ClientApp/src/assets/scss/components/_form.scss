@@ -1,0 +1,89 @@
+.form-group {
+  margin-bottom: $input-holder-margin / 2; // 10px
+}
+
+.form-group--width {
+  @include media(">=medium") {
+    width: 343px;
+  }
+
+  @include media(">=xlarge") {
+    width: 400px;
+  }
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  height: $input-height;
+  padding-left: $input-indent-x;
+  padding-right: $input-indent-x;
+  margin-bottom: $input-holder-margin / 2; // 10px
+
+  font-size: $font-size-medium;
+  color: $black;
+  background-color: $white;
+  border: $default-border;
+  border-radius: $border-radius;
+  appearance: none;
+
+  &::placeholder {
+    font-size: $font-size-medium;
+    color: $col-placeholder;
+    @include media(">=medium") {
+      font-size: $base-font-size;
+    }
+  }
+}
+
+input::-ms-reveal,
+input::-ms-clear {
+  display: none;
+}
+
+.form-group__label {
+  margin-bottom: $input-holder-margin / 2; // 10px
+  font-size: $font-size-medium;
+  color: $secondary;
+  font-weight: 600;
+
+  @include media(">=xlarge") {
+    font-size: $base-font-size;
+  }
+}
+
+.form-text {
+  font-size: $font-size-small;
+
+  @include media(">=medium") {
+    font-size: $font-size-additional;
+  }
+}
+
+.form-subtext {
+  font-size: $font-size-small;
+  color: $secondary;
+  @include media(">=xlarge") {
+    font-size: $font-size-additional;
+  }
+}
+
+.input-holder {
+  position: relative;
+  .form-control {
+    padding-right: 56px;
+  }
+}
+
+.btn-show-password {
+  position: absolute;
+  top: 50%;
+  right: 18px;
+  transform: translateY(-50%);
+
+  &:after {
+    content: $icon-show;
+    font-family: $icomoon-font-family;
+    font-size: 22px;
+  }
+}

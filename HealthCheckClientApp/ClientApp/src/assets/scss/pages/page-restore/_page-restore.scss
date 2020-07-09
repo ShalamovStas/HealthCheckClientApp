@@ -1,0 +1,27 @@
+.text-holder-restore {
+  margin-bottom: 40px;
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    max-width: 465px;
+  }
+
+  @include media(">=xlarge") {
+    margin-bottom: 60px;
+  }
+}
+
+.btn-holder-restore {
+  margin-top: 60px;
+  @include media(">=xlarge") {
+    margin-top: 100px;
+  }
+}
+
+.intro__inner-restore {
+  padding-top: 100px;
+  padding-bottom: 50px;
+
+  @include media("<medium") {
+    min-height: auto;
+  }
+}

@@ -1,0 +1,17 @@
+.range {
+  position: relative;
+  width: 280px;
+  height: 6px;
+  background-color: $bg-body;
+  border-radius: $border-radius;
+}
+
+.range__inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: 245px;
+  height: 100%;
+  background-color: $primary;
+  border-radius: $border-radius;
+}

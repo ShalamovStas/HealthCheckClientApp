@@ -1,0 +1,91 @@
+.btn {
+  display: inline-block;
+  min-width: 200px;
+  min-height: 60px;
+  padding: map_get($btn-padding-y, "xs") 20px;
+  font-size: $font-size-medium;
+  background-color: transparent;
+  text-align: center; // for tag - a
+  border: 2px solid transparent;
+  border-radius: $border-radius;
+
+  @include multi-transition($animation-speed, color, background-color, border-color);
+
+  @include media(">=xlarge") {
+    padding: map_get($btn-padding-y, "md") $btn-padding-x;
+    font-size: $base-font-size;
+  }
+
+  &:focus {
+    color: $white;
+    background-color: $btn-hover-color;
+    border-color: $btn-hover-color;
+  }
+}
+
+//.btn[disabled^="disabled"] {
+//  font-weight: 800;
+//  color: $disable-txt;
+//  background-color: $btn-disabled-bg;
+//  box-shadow: none;
+//  pointer-events: none;
+//  border-color: transparent;
+//}
+
+.btn.btn--disabled {
+  font-weight: 800;
+  color: $disable-txt;
+  background-color: $btn-disabled-bg;
+  box-shadow: none;
+  pointer-events: none;
+}
+
+.btn--small {
+  min-width: 180px;
+}
+
+.form-group--danger {
+  .form-group__label {
+    color: $danger;
+  }
+  .form-control {
+    border-color: $danger;
+  }
+}
+
+.btn-additional {
+  min-width: auto;
+  min-height: auto;
+  display: inline-flex;
+  align-items: center;
+  font-weight: bold;
+  color: $primary;
+
+  &:focus {
+    color: $btn-hover-color;
+    background-color: transparent;
+    border-color: transparent;
+  }
+
+}
+
+@each $btn-class, $color in $colors {
+  .btn-#{$btn-class} {
+    font-weight: 800;
+    color: $white;
+    background-color: $color;
+    box-shadow: $btn-shadow;
+  }
+
+  .btn-outline-#{$btn-class} {
+    font-weight: bold;
+    color: $primary;
+    border: $btn-border-width solid $primary;
+
+    &:hover {
+      color: $white;
+      border-color: transparent;
+      background-color: $primary;
+    }
+  }
+}

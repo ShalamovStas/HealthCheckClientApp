@@ -1,0 +1,22 @@
+.qr-holder {
+  position: relative;
+  width: 196px;
+  padding: 10px;
+  border: 1px solid $gray-100;
+  border-radius: 10px;
+
+  @include media(">=medium") {
+    width: 212px;
+  }
+
+  @include media(">=xlarge") {
+    width: 285px;
+    padding: 14px;
+  }
+
+  &:after {
+    content: "";
+    padding-top: 100%;
+    display: block;
+  }
+}

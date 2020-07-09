@@ -1,0 +1,148 @@
+$breakpoint: (
+  'presmall': 320px,
+  'small': 480px,
+  'premedium': 640px,
+  'medium': 768px,
+  'large': 1024px,
+  'xlarge': 1200px,
+  'xxlarge': 1440px,
+);
+
+$grid-xs: (
+  gutter-width: 16px,
+  grid-margins: 22px
+);
+
+$grid-md: (
+  grid-margins: 30px
+);
+
+$grid-columns: 12;
+/* ===================================================================== */
+
+// Colors
+$black: #191B1C;
+$white: #fff;
+$gray-100: #F2F9FB;
+$gray-200: #E7ECFA;
+$gray-300: #DDE1EF;
+$gray-400: #C4C8D3;
+$gray-600: #7A889F;
+$gray: #666B6C;
+$light-gray: #9EB3B9;
+$red: #D6433C;
+$blue: #00ACCD;
+$light-blue: #F2F9FB;
+$yellow:  #EFCE58;
+$green:   #20A234;
+
+$grays:(
+  "100": $gray-100,
+  "200": $gray-200,
+  "300": $gray-300,
+  "600": $gray-600,
+);
+
+$primary: $blue;
+$secondary: $gray;
+$secondary-light: $light-gray;
+$danger:  $red;
+$light:   $gray-100;
+$success: $green;
+$warning: $yellow;
+
+$colors: (
+  'black': $black,
+  'white': $white,
+  "primary": $primary,
+  "danger":  $danger,
+  "light":   $light,
+  "secondary": $secondary,
+  "secondary-light": $secondary-light,
+  "success": $success,
+  "warning": $warning,
+  "gray-100": $gray-100,
+);
+
+$disable-txt: $secondary-light;
+
+$bg-footer: #36363a;
+$bg-body: #F2F9FB; // body, privacy-modal__header, scroll-bar, dropdown-language
+
+/*----- Form var -----*/
+$col-border: $light-gray;
+$col-focus: #7f7f7f;
+$col-error: $danger;
+$col-success: $success;
+$col-placeholder: $gray;
+$default-border: 1px solid $col-border;
+$input-height: 60px;
+$input-holder-margin: 20px;
+$input-indent-x: 16px;
+
+/*----- Font -----*/
+$font-family-muli: 'Muli', 'Helvetica',  'Arial', sans-serif;
+
+/*----- Body -----*/
+$base-font-size: 18px;
+$font-size-additional: 14px;
+$font-size-large: 24px;
+$font-size-medium: 16px;
+$font-size-small: 12px;
+$base-line-height: 1.5;
+$body-color: $black;
+$base-min-width: 320px;
+$base-font-family: $font-family-muli;
+
+$vertical-rhythm: ($base-line-height * 1em);
+
+
+$animation-speed: .3s; // for mixin
+
+$border-radius: 5px;
+$border-radius-modal: 20px;
+
+
+/* buttons  */
+
+$font-size-main-title: 54px;
+$color-main-title: $black;
+
+$card-shadow: 4px 4px 40px rgba(32, 63, 107, 0.2);
+
+$btn-font-weight: 800;
+$btn-outline-font-weight: bold;
+$btn-border-width: 2px;
+$btn-padding-x: 20px;
+$btn-shadow: 0px 4px 10px rgba(0, 172, 205, 0.15);
+$btn-hover-color: #0098B6;
+$btn-disabled-bg: #F2F9FB;
+
+$btn-padding-y: (
+  xs: 16px,
+  md: 14px
+);
+
+$shadow: 0 5px 13px rgba(25, 27, 28, .15);
+$btn-shadow: 0px 4px 10px rgba(0, 172, 205, .15);
+
+// Headers
+$h1-font-size: 80px !default;
+$h2-font-size: 40px !default;
+$h3-font-size: 24px !default;
+$h4-font-size: $base-font-size !default;
+
+// checkbox
+$checkbox-border-color: $light-gray;
+$checkbox-border-radius: 2px;
+
+
+// footer
+$footer-height: (
+  xs: 146px,
+  md: 112px,
+  xl: 111px
+)
+
+
+
