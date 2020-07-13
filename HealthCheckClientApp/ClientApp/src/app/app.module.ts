@@ -15,6 +15,9 @@ import { LoginComponent } from './login/login.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { RestorePasswordComponent } from './restore-password/restore-password.component';
 import { ProfileComponent } from './profile/profile.component';
+import { LanguageSelectorComponent } from './layout/language-selector/language-selector.component';
+import {NgbDropdownModule, NgbTabsetModule, NgbTooltipModule} from '@ng-bootstrap/ng-bootstrap';
+import {ScriptLoaderService} from './_services/script-loader.service';
 
 @NgModule({
   declarations: [
@@ -28,7 +31,8 @@ import { ProfileComponent } from './profile/profile.component';
     LoginComponent,
     SignUpComponent,
     RestorePasswordComponent,
-    ProfileComponent
+    ProfileComponent,
+    LanguageSelectorComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -44,9 +48,16 @@ import { ProfileComponent } from './profile/profile.component';
       { path: 'restore-password', component: RestorePasswordComponent },
       { path: 'profile', component: ProfileComponent },
       { path: '**', component: LoginComponent },
-    ])
+    ]),
+    // ng-bootstrap modules
+		NgbDropdownModule,
+		NgbTabsetModule,
+		NgbTooltipModule,
   ],
-  providers: [],
+  exports: [
+    LanguageSelectorComponent
+  ],
+  providers: [ScriptLoaderService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

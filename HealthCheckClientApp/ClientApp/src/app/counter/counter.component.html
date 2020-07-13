@@ -1,7 +1,76 @@
-<h1>Counter</h1>
+<div style="margin-top: 5rem;">
 
-<p>This is a simple example of an Angular component.</p>
+    <h1>Counter</h1>
 
-<p aria-live="polite">Current count: <strong>{{ currentCount }}</strong></p>
+    <p>This is a simple example of an Angular component.</p>
 
-<button class="btn btn-primary" (click)="incrementCounter()">Increment</button>
+    <p aria-live="polite">Current count: <strong>{{ currentCount }}</strong></p>
+
+    <button class="btn btn-primary" (click)="incrementCounter()">Increment</button>
+    <p>---------</p>
+
+    <!-- <kt-language-selector></kt-language-selector> -->
+
+    <div ngbDropdown class="d-inline-block">
+        <!-- <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Toggle dropdown</button>
+        <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+          <button ngbDropdownItem>Action - 1</button>
+          <button ngbDropdownItem>Another Action</button>
+          <button ngbDropdownItem>Something else is here</button>
+        </div>
+      </div> -->
+
+        <!-- <div ngbDropdownToggle class="kt-header__topbar-wrapper">
+            <span class="kt-header__topbar-icon kt-header__topbar-icon--brand">
+                <img class="" src="./assets/media/flags/260-united-kingdom.svg" alt="" />
+            </span>
+        </div>
+        <div ngbDropdownMenu aria-labelledby="dropdownBasic1"
+            class="dropdown-menu dropdown-menu-fit dropdown-menu-right dropdown-menu-anim dropdown-menu-top-unround">
+            <ul class="kt-nav kt-margin-t-10 kt-margin-b-10">
+                <ng-container>
+                    <li class="kt-nav__item kt-nav__item--active">
+                        <a href="javascript:;" (click)="setLanguage(language.lang)"
+                            class="kt-nav__link kt-nav__link--active">
+                            <span class="kt-nav__link-icon">
+                                <img src="./assets/media/flags/260-united-kingdom.svg">
+                            </span>
+                            <span class="kt-nav__link-text">Eng</span>
+                        </a>
+                    </li>
+                </ng-container>
+            </ul>
+        </div> -->
+
+        <div ngbDropdownToggle class="logo">
+            <button class="btn-user btn-reset" type="button">
+                <span class="btn-user__text">Sally Johnson</span>
+                <img class="btn-user__img" src="../../assets/images/img_girl.png" alt="icon person">
+            </button>
+        </div>
+        <div ngbDropdownMenu aria-labelledby="dropdownBasic1" class="">
+            <ul class="">
+                <!-- <ng-container> -->
+                    <li class="">
+                        <a routerLink="/profile" class="">
+                            <span class=""></span>
+                            My profile
+                        </a>
+                    </li>
+                    <li class="dropdown__item">
+                        <a routerLink="/profile" class="dropdown__btn dropdown-user__btn">
+                            <span class="icon icon-folder text-primary"></span>
+                            My results
+                        </a>
+                    </li>
+                    <li class="dropdown__item">
+                        <button class="dropdown__btn dropdown-user__btn" type="button" (click)="logout()">
+                            <span class="icon icon-log-out"></span>
+                            Log out
+                        </button>
+                    </li>
+                <!-- </ng-container> -->
+            </ul>
+        </div>
+
+    </div>

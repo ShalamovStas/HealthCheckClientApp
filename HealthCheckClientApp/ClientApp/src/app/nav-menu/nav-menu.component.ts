@@ -1,15 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { ScriptLoaderService } from '../_services/script-loader.service';
 
-
+declare let mLayout: any;
 @Component({
   selector: 'app-nav-menu',
   templateUrl: './nav-menu.component.html',
-  styleUrls: ['./nav-menu.component.css']
+  // styleUrls: ['./nav-menu.component.scss']
 })
 export class NavMenuComponent  implements OnInit {
 
-  constructor(private _router: Router){
+  constructor(private _router: Router,
+    private _script: ScriptLoaderService,){
 
   }
 
@@ -30,6 +32,14 @@ export class NavMenuComponent  implements OnInit {
     });
 
     this.toggleUserDropdown();
+
+    // this._script.loadScripts('body', [
+    //   'assets/js/vendors.bundle.js',
+    //   'assets/js/scripts.bundle.js'], true).then(() => {
+    //     mLayout.initHeader();
+
+    //   });
+
   }
 
   toggleUserDropdown() {
