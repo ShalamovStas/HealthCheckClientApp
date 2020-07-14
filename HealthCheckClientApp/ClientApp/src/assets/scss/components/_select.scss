@@ -61,8 +61,8 @@
 .select-datepicker {
   .select__current {
     &:before {
-      content: $icon-calendar;
-      font-family: $icomoon-font-family;
+      //content: $icon-calendar;
+      //font-family: $icomoon-font-family;
       border: 0;
       right: 18px;
     }

@@ -58,8 +58,8 @@ $privacy-indent: 16px;
   @include size(22px);
 
   &:before {
-    content: $icon-close;
-    font-family: $icomoon-font-family;
+    //content: $icon-close;
+    //font-family: $icomoon-font-family;
     font-size: 13px;
 
     @include media(">=medium") {

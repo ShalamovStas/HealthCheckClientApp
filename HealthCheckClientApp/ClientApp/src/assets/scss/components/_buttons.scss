@@ -1,4 +1,4 @@
-.btn {
+.c-btn {
   display: inline-block;
   min-width: 200px;
   min-height: 60px;
@@ -32,7 +32,7 @@
 //  border-color: transparent;
 //}
 
-.btn.btn--disabled {
+.c-btn.c-btn--disabled {
   font-weight: 800;
   color: $disable-txt;
   background-color: $btn-disabled-bg;
@@ -40,7 +40,7 @@
   pointer-events: none;
 }
 
-.btn--small {
+.c-btn--small {
   min-width: 180px;
 }
 
@@ -53,7 +53,7 @@
   }
 }
 
-.btn-additional {
+.c-btn-additional {
   min-width: auto;
   min-height: auto;
   display: inline-flex;
@@ -70,14 +70,14 @@
 }
 
 @each $btn-class, $color in $colors {
-  .btn-#{$btn-class} {
+  .c-btn-#{$btn-class} {
     font-weight: 800;
     color: $white;
     background-color: $color;
     box-shadow: $btn-shadow;
   }
 
-  .btn-outline-#{$btn-class} {
+  .c-btn-outline-#{$btn-class} {
     font-weight: bold;
     color: $primary;
     border: $btn-border-width solid $primary;

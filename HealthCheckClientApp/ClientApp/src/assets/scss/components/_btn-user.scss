@@ -5,6 +5,17 @@
   font-weight: bold;
   font-size: $base-font-size;
   z-index: 1001;
+
+  &.dropdown-toggle {
+    &:after {
+      display: none;
+    }
+  }
+}
+
+.dropdown-toggle::after {
+  display: none !important;
+  content: '.' !important;
 }
 
 .btn-user__text {

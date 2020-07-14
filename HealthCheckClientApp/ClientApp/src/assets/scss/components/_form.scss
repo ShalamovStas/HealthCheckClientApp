@@ -82,8 +82,8 @@ input::-ms-clear {
   transform: translateY(-50%);
 
   &:after {
-    content: $icon-show;
-    font-family: $icomoon-font-family;
+    //content: $icon-show;
+    //font-family: $icomoon-font-family;
     font-size: 22px;
   }
 }
