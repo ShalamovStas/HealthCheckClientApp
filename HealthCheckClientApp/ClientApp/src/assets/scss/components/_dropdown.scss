@@ -68,6 +68,10 @@
   @include media(">=xlarge") {
     font-size: $base-font-size;
   }
+
+  &:hover {
+    color: $black;
+  }
 }
 
 .dropdown-language__btn {
@@ -162,6 +166,7 @@
 
 
 .dropdown__overlay {
+  display: none;
   position: fixed;
   top: 0;
   left: 0;

@@ -1,8 +1,10 @@
-.form-group {
+// prefix c it's mean custom
+
+.c-form-group {
   margin-bottom: $input-holder-margin / 2; // 10px
 }
 
-.form-group--width {
+.c-form-group--width {
   @include media(">=medium") {
     width: 343px;
   }
@@ -12,7 +14,7 @@
   }
 }
 
-.form-control {
+.c-form-control {
   display: block;
   width: 100%;
   height: $input-height;
@@ -41,7 +43,7 @@ input::-ms-clear {
   display: none;
 }
 
-.form-group__label {
+.c-form-group__label {
   margin-bottom: $input-holder-margin / 2; // 10px
   font-size: $font-size-medium;
   color: $secondary;
@@ -70,7 +72,7 @@ input::-ms-clear {
 
 .input-holder {
   position: relative;
-  .form-control {
+  .c-form-control {
     padding-right: 56px;
   }
 }
