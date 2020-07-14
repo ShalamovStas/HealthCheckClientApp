@@ -1,7 +1,7 @@
 // Angular
 import { Component, HostBinding, OnInit, Input } from '@angular/core';
 import { NavigationStart, Router } from '@angular/router';
-import {NgbPopoverModule} from '@ng-bootstrap/ng-bootstrap'
+import { NgbPopoverModule } from '@ng-bootstrap/ng-bootstrap'
 // RxJS
 import { filter } from 'rxjs/operators';
 
@@ -14,11 +14,16 @@ import { filter } from 'rxjs/operators';
 export class DropdownComponent implements OnInit {
 
 
-	constructor() {
-  }
-  
+	constructor(private _router: Router) {
+	}
+
 
 	ngOnInit() {
 	}
 
+	logout() {
+		localStorage.removeItem("currentUser");
+		this._router.navigate(['/login']);
+
+	}
 }

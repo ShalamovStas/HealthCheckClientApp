@@ -1,5 +1,5 @@
 $icomoon-font-family: "icomoon";
-$icomoon-font-path: "../fonts/icomoon" !default;
+$icomoon-font-path: "src/assets/common/" !default;
 
 $icon-twitter: "\e906";
 $icon-apple: "\e907";
@@ -25,9 +25,9 @@ $icon-facebook: "\e919";
 @font-face {
   font-family: $icomoon-font-family;
   src:
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?4a5sly') format('truetype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?4a5sly') format('woff'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?4a5sly##{$icomoon-font-family}') format('svg');
+    url('src/assets/common/icomoon/icomoon.ttf') format('truetype'),
+    url('src/assets/common/icomoon/icomoon.woff') format('woff'),
+    url('src/assets/common/icomoon/icomoon.svg') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;

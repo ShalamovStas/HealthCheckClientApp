@@ -1,4 +1,7 @@
-<app-nav-menu></app-nav-menu>
+<div [ngSwitch]="navMenuType">
+  <header-base *ngSwitchCase="'BASIC'"></header-base>
+  <header-standart *ngSwitchCase="'STARNDART'"></header-standart>
+</div>
 <main>
   <router-outlet></router-outlet>
 </main>

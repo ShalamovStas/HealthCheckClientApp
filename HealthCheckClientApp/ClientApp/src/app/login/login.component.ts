@@ -11,6 +11,12 @@ export class LoginComponent {
 
   signIn(){
     console.log("sign-in");
+    //currentUser
+    let user = {
+      name: "currentUser",
+      email: "testEmail"
+    }
+    localStorage.setItem('currentUser', JSON.stringify(user));
     this._router.navigate(['/home']);
   }
 }

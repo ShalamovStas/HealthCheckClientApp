@@ -1,26 +1,25 @@
-<div ngbDropdown placement="bottom" class="dropdown header__dropdown">
+<div ngbDropdown id="dropdownBasic1" placement="bottom" class="dropdown header__dropdown">
 	<div ngbDropdownToggle class="btn-user btn-reset">
 		<span class="btn-user__text">Sally Johnson</span>
 		<img class="btn-user__img" src="../../assets/images/img_girl.png" alt="icon person">
 	</div>
-	<div ngbDropdownMenu aria-labelledby="dropdownBasic1" style=""
+	<div ngbDropdownMenu aria-labelledby="dropdownBasic1"
 		class="dropdown-menu dropdown-menu-fit dropdown-menu-right dropdown-menu-anim dropdown-menu-top-unround">
 		<ul class="" style="min-width: 250px;">
-
 			<li class="dropdown__item">
-				<a routerLink="/profile" class="dropdown__btn dropdown-user__btn">
+				<a ngbDropdownItem routerLink="/profile" class="dropdown__btn dropdown-user__btn">
 					<span class="icon icon-person text-primary"></span>
 					My profile
 				</a>
 			</li>
 			<li class="dropdown__item">
-				<a routerLink="/profile" class="dropdown__btn dropdown-user__btn">
+				<a ngbDropdownItem routerLink="/profile" class="dropdown__btn dropdown-user__btn">
 					<span class="icon icon-folder text-primary"></span>
 					My results
 				</a>
 			</li>
 			<li class="dropdown__item">
-				<button class="dropdown__btn dropdown-user__btn" type="button" (click)="logout()">
+				<button ngbDropdownItem class="dropdown__btn dropdown-user__btn" type="button" (click)="logout()">
 					<span class="icon icon-log-out"></span>
 					Log out
 				</button>
