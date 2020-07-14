@@ -1,27 +1,3 @@
-<!-- <div ngbDropdown placement="bottom" class="kt-header__topbar-item kt-header__topbar-item--langs">
-	<div ngbDropdownToggle class="kt-header__topbar-wrapper">
-		<span class="kt-header__topbar-icon"
-			[ngClass]="{ 'kt-header__topbar-icon--brand' : iconType === 'brand' }">
-			<img class="" src="{{language?.flag}}" alt=""/>
-		</span>
-	</div>
-	<div ngbDropdownMenu aria-labelledby="dropdownBasic1" class="dropdown-menu dropdown-menu-fit dropdown-menu-right dropdown-menu-anim dropdown-menu-top-unround">
-		<ul class="kt-nav kt-margin-t-10 kt-margin-b-10">
-			<ng-container *ngFor="let language of languages">
-				<li class="kt-nav__item" [ngClass]="{'kt-nav__item--active': language.active}">
-					<a href="javascript:;" (click)="setLanguage(language.lang)" [ngClass]="{'kt-nav__link--active': language.active}" class="kt-nav__link">
-						<span class="kt-nav__link-icon">
-							<img src="{{language.flag}}">
-						</span>
-						<span class="kt-nav__link-text">{{language.name}}</span>
-					</a>
-				</li>
-			</ng-container>
-		</ul>
-	</div>
-</div> -->
-
-
 <div ngbDropdown placement="bottom" class="dropdown header__dropdown">
 	<div ngbDropdownToggle class="btn-user btn-reset">
 		<span class="btn-user__text">Sally Johnson</span>
@@ -29,44 +5,61 @@
 	</div>
 	<div ngbDropdownMenu aria-labelledby="dropdownBasic1" style="will-change: inherit !important;"
 		class="dropdown-menu dropdown-menu-fit dropdown-menu-right dropdown-menu-anim dropdown-menu-top-unround">
-
-		<!-- <ul class="kt-nav kt-margin-t-10 kt-margin-b-10">
-			<ng-container *ngFor="let language of languages">
-				<li class="kt-nav__item" [ngClass]="{'kt-nav__item--active': language.active}">
-					<a href="javascript:;" (click)="setLanguage(language.lang)"
-						[ngClass]="{'kt-nav__link--active': language.active}" class="kt-nav__link">
-						<span class="kt-nav__link-icon">
-							<img src="{{language.flag}}">
-						</span>
-						<span class="kt-nav__link-text">{{language.name}}</span>
-					</a>
-				</li>
-			</ng-container>
-		</ul> -->
-
-
-
 		<ul class="" style="min-width: 250px;">
-			<!-- <ng-container> -->
-				<li class="dropdown__item">
-					<a routerLink="/profile" class="dropdown__btn dropdown-user__btn">
-						<span class="icon icon-person text-primary"></span>
-						My profile
-					</a>
-				</li>
-				<li class="dropdown__item">
-					<a routerLink="/profile" class="dropdown__btn dropdown-user__btn">
-						<span class="icon icon-folder text-primary"></span>
-						My results
-					</a>
-				</li>
-				<li class="dropdown__item">
-					<button class="dropdown__btn dropdown-user__btn" type="button" (click)="logout()">
-						<span class="icon icon-log-out"></span>
-						Log out
-					</button>
-				</li>
-			<!-- </ng-container> -->
+		
+			<li class="dropdown__item">
+				<a routerLink="/profile" class="dropdown__btn dropdown-user__btn">
+					<span class="icon icon-person text-primary"></span>
+					My profile
+				</a>
+			</li>
+			<li class="dropdown__item">
+				<a routerLink="/profile" class="dropdown__btn dropdown-user__btn">
+					<span class="icon icon-folder text-primary"></span>
+					My results
+				</a>
+			</li>
+			<li class="dropdown__item">
+				<button class="dropdown__btn dropdown-user__btn" type="button" (click)="logout()">
+					<span class="icon icon-log-out"></span>
+					Log out
+				</button>
+			</li>
+		
 		</ul>
 	</div>
 </div>
+
+
+<!-- <ngbd-popover-basic></ngbd-popover-basic> -->
+
+
+<!-- <div class="row">
+	<div class="col">
+		<div ngbDropdown class="d-inline-block">
+			<button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Toggle dropdown</button>
+			<div ngbDropdownMenu aria-labelledby="dropdownBasic1" style="top: 20px  !important;" class="dropdown-menu dropdown-menu-fit dropdown-menu-right dropdown-menu-anim dropdown-menu-top-unround dropdown-user__menu">
+				<ul class="" style="min-width: 250px;">
+					<li ngbDropdownItem class="dropdown__item">
+						<a routerLink="/profile" class="dropdown__btn dropdown-user__btn">
+							<span class="icon icon-person text-primary"></span>
+							My profile
+						</a>
+					</li>
+					<li ngbDropdownItem class="dropdown__item">
+						<a routerLink="/profile" class="dropdown__btn dropdown-user__btn">
+							<span class="icon icon-folder text-primary"></span>
+							My results
+						</a>
+					</li>
+					<li ngbDropdownItem class="dropdown__item">
+						<button class="dropdown__btn dropdown-user__btn" type="button" (click)="logout()">
+							<span class="icon icon-log-out"></span>
+							Log out
+						</button>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div> -->

@@ -18,6 +18,11 @@ import { ProfileComponent } from './profile/profile.component';
 import { LanguageSelectorComponent } from './layout/language-selector/language-selector.component';
 import {NgbDropdownModule, NgbTabsetModule, NgbTooltipModule} from '@ng-bootstrap/ng-bootstrap';
 import {ScriptLoaderService} from './_services/script-loader.service';
+import {NgbdPopoverBasicModule} from './layout/popover/popover-basic.module';
+import {DropdownComponent} from './layout/dropdown/dropdown.component';
+
+
+
 
 @NgModule({
   declarations: [
@@ -32,7 +37,8 @@ import {ScriptLoaderService} from './_services/script-loader.service';
     SignUpComponent,
     RestorePasswordComponent,
     ProfileComponent,
-    LanguageSelectorComponent
+    LanguageSelectorComponent,
+    DropdownComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -50,9 +56,10 @@ import {ScriptLoaderService} from './_services/script-loader.service';
       { path: '**', component: LoginComponent },
     ]),
     // ng-bootstrap modules
-		NgbDropdownModule,
+    NgbDropdownModule,
 		NgbTabsetModule,
-		NgbTooltipModule,
+    NgbTooltipModule,
+    NgbdPopoverBasicModule
   ],
   exports: [
     LanguageSelectorComponent

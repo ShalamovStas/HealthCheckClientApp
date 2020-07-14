@@ -18,7 +18,7 @@
 .dropdown__menu {
   display: none;
   position: absolute;
-  z-index: 100;
+  z-index: 1001;
   background-color: $white;
   box-shadow: $shadow;
   border-radius: $border-radius;
@@ -158,4 +158,14 @@
     font-size: 20px;
     transform: translateY(-50%);
   }
+}
+
+
+.dropdown__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
 }

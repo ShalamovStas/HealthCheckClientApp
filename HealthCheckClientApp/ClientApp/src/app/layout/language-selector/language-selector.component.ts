@@ -1,6 +1,7 @@
 // Angular
 import { Component, HostBinding, OnInit, Input } from '@angular/core';
 import { NavigationStart, Router } from '@angular/router';
+import {NgbPopoverModule} from '@ng-bootstrap/ng-bootstrap'
 // RxJS
 import { filter } from 'rxjs/operators';
 // Translate
