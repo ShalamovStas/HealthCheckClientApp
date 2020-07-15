@@ -47,7 +47,7 @@
 }
 
 .form-group--danger {
-  .form-group__label {
+  .c-form-group__label {
     color: $danger;
   }
   .c-form-control {
@@ -77,6 +77,10 @@
     color: $white;
     background-color: $color;
     box-shadow: $btn-shadow;
+
+    &:hover {
+      color: $white;
+    }
   }
 
   .c-btn-outline-#{$btn-class} {

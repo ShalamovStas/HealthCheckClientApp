@@ -23,6 +23,7 @@ main {
 
 .container {
   padding: 0 map_get($grid-xs, "gutter-width");
+  max-width: initial;
 
   @media (min-width: map_get($breakpoint, 'premedium')) {
     padding: 0 map_get($grid-md, 'grid-margins');
