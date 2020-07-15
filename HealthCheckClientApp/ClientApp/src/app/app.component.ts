@@ -35,12 +35,11 @@ export class AppComponent {
   }
 
   private handleRouting(routeUrl: string) {
-    if (routeUrl === '/login' || routeUrl === '/') {
+    if (routeUrl.match(/login.?/) || routeUrl.match(/sign-up.?/) || routeUrl.match(/restore-password.?/) || routeUrl === '/') {
       this.navMenuType = NavMenuType.BASIC;
     } else {
       this.navMenuType = NavMenuType.STARNDART;
     }
-
   }
 
   //Show/hide userDropdown menu 

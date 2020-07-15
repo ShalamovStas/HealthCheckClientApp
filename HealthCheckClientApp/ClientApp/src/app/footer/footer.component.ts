@@ -14,13 +14,14 @@ export class FooterComponent implements OnInit {
         this.year = (new Date()).getFullYear();
     }
     ngOnInit() {
-        var btnLanguage = document.querySelector('.btn-language-js');
-        var dropdownLanguage = document.querySelector('.dropdown-language');
-        btnLanguage.addEventListener('click', function () {
-            if (dropdownLanguage) {
-              dropdownLanguage.classList.toggle('dropdown-language--active');
-            }
-          });
+        //Close footer realization 
+        // var btnLanguage = document.querySelector('.btn-language-js');
+        // var dropdownLanguage = document.querySelector('.dropdown-language');
+        // btnLanguage.addEventListener('click', function () {
+        //     if (dropdownLanguage) {
+        //       dropdownLanguage.classList.toggle('dropdown-language--active');
+        //     }
+        //   });
 
     }
 

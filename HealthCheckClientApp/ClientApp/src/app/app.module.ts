@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 
@@ -23,8 +23,8 @@ import {NgbdPopoverBasicModule} from './layout/popover/popover-basic.module';
 import {DropdownComponent} from './layout/dropdown/dropdown.component';
 import {AuthGuard} from './_services/guard/guard';
 import {UserService} from './_services/userService/userService';
-
-
+import { NgSelectModule } from '@ng-select/ng-select';
+import { NgOptionHighlightModule } from '@ng-select/ng-option-highlight';
 
 
 
@@ -51,6 +51,8 @@ import {UserService} from './_services/userService/userService';
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
     HttpClientModule,
     FormsModule,
+    ReactiveFormsModule,
+    NgOptionHighlightModule,
     RouterModule.forRoot([
       { path: 'home', component: HomeComponent, pathMatch: 'full', canActivate: [AuthGuard]},
       { path: 'counter', component: CounterComponent, canActivate: [AuthGuard] },
@@ -66,7 +68,8 @@ import {UserService} from './_services/userService/userService';
     NgbDropdownModule,
 		NgbTabsetModule,
     NgbTooltipModule,
-    NgbdPopoverBasicModule
+    NgbdPopoverBasicModule,
+    NgSelectModule
   ],
   exports: [
     LanguageSelectorComponent
