@@ -5,7 +5,8 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { NavMenuComponent } from './nav-menu/nav-menu.component';
+import { HeaderStandartComponent } from './header/header-standart/header-standart.component';
+import { HeaderBaseComponent } from './header/header-base/header-base.component';
 import { HomeComponent } from './home/home.component';
 import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
@@ -20,6 +21,11 @@ import {NgbDropdownModule, NgbTabsetModule, NgbTooltipModule} from '@ng-bootstra
 import {ScriptLoaderService} from './_services/script-loader.service';
 import {NgbdPopoverBasicModule} from './layout/popover/popover-basic.module';
 import {DropdownComponent} from './layout/dropdown/dropdown.component';
+import {AuthGuard} from './_services/guard/guard';
+import {UserService} from './_services/userService/userService';
+
+
+
 
 
 
@@ -27,7 +33,8 @@ import {DropdownComponent} from './layout/dropdown/dropdown.component';
 @NgModule({
   declarations: [
     AppComponent,
-    NavMenuComponent,
+    HeaderStandartComponent,
+    HeaderBaseComponent,
     HomeComponent,
     CounterComponent,
     FetchDataComponent,
@@ -38,21 +45,21 @@ import {DropdownComponent} from './layout/dropdown/dropdown.component';
     RestorePasswordComponent,
     ProfileComponent,
     LanguageSelectorComponent,
-    DropdownComponent
+    DropdownComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
     HttpClientModule,
     FormsModule,
     RouterModule.forRoot([
-      { path: 'home', component: HomeComponent, pathMatch: 'full' },
-      { path: 'counter', component: CounterComponent },
+      { path: 'home', component: HomeComponent, pathMatch: 'full', canActivate: [AuthGuard]},
+      { path: 'counter', component: CounterComponent, canActivate: [AuthGuard] },
       { path: 'fetch-data', component: FetchDataComponent },
-      { path: 'health-test', component: HealthTestComponent },
+      { path: 'health-test', component: HealthTestComponent, canActivate: [AuthGuard] },
       { path: 'login', component: LoginComponent },
       { path: 'sign-up', component: SignUpComponent },
       { path: 'restore-password', component: RestorePasswordComponent },
-      { path: 'profile', component: ProfileComponent },
+      { path: 'profile', component: ProfileComponent, canActivate: [AuthGuard] },
       { path: '**', component: LoginComponent },
     ]),
     // ng-bootstrap modules
@@ -64,7 +71,11 @@ import {DropdownComponent} from './layout/dropdown/dropdown.component';
   exports: [
     LanguageSelectorComponent
   ],
-  providers: [ScriptLoaderService],
+  providers: [
+    ScriptLoaderService, 
+    AuthGuard, 
+    UserService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
