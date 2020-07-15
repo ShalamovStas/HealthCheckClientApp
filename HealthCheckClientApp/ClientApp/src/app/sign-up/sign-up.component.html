@@ -1,4 +1,7 @@
-<main>
+<<<<<<< HEAD <main>
+
+  =======
+  >>>>>>> 6df69510c2a4853dff99f0c2dc965861b3edab99
   <div class="intro">
     <div class="container">
       <div class="intro__inner-indent">
@@ -21,7 +24,7 @@
           </li>
         </ul>
 
-        <form [formGroup]="heroForm" class="sign-up__form" name="signUpForm">
+        <form class="sign-up__form" name="signUpForm">
 
           <div class="form-group-wrap form-group-wrap-1">
             <div class="c-form-group">
@@ -64,6 +67,7 @@
             <div class="c-form-group">
               <label class="c-form-group__label">Sex</label>
 
+              <!-- original Element -->
               <!-- <div class="select select-js">
                 <button class="select__current btn-reset select__current-js" type="button">Select sex</button>
                 <div class="list-wrap">
@@ -78,59 +82,23 @@
                 </div>
               </div> -->
 
+              <select class="c-form-group select-style" id="sex" name="sex" required="">
+                <option disabled="" selected="" value="">Select sex</option>
+                <option value="4ab96ee4-cc84-4f0e-bbaf-c6e3075107d1">Male</option>
+                <option value="a7b79c47-566e-48bb-b78b-1168284d0e99">Female</option>
+              </select>
 
-
-              <div ngbDropdown class="select">
-                <!-- <button class="btn btn-outline-primary" id="dropdownSex" ngbDropdownToggle>Toggle dropdown</button> -->
-                <button class="select__current btn-reset" id="dropdownSex" ngbDropdownToggle>Select sex</button>
-                <div ngbDropdownMenu aria-labelledby="dropdownSex">
-                  <div class="list-wrap">
-                    <ul class="select__body">
-                      <li ngbDropdownItem class="select__option">
-                        <button class="select__btn btn-reset" type="button">Male</button>
-                      </li>
-                      <li ngbDropdownItem class="select__option">
-                        <button class="select__btn btn-reset" type="button">Female</button>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
             </div>
 
-            <!-- <select class="c-form-group" style="display: block;
-            width: 100%;
-            height: 60px;
-            padding-left: 16px;
-            padding-right: 16px;
-            margin-bottom: 10px;
-            font-size: 16px;
-            color: #191B1C;
-            background-color: #fff;
-            border: 1px solid #9EB3B9;
-            border-radius: 5px;" id="country" name="country" required="">
-              <option disabled="" selected="" value="">Select sex</option>
-              <option value="4ab96ee4-cc84-4f0e-bbaf-c6e3075107d1">Male</option>
-              <option value="a7b79c47-566e-48bb-b78b-1168284d0e99">Female</option>
-            </select> -->
-
-
-              <ng-select  appearance="outline" #agreeSelect labelForId="yesno"
-                [searchable]="false" formControlName="agree">
-                <ng-option [value]="true">Yes</ng-option>
-                <ng-option [value]="false">No</ng-option>
-              </ng-select>
-
-            <p class="sh-custom">TEST</p>
 
             <!-- need to change to datepicker -->
             <div class="c-form-group">
               <label class="c-form-group__label">Date of birth</label>
 
-              <div class="select select-datepicker select-js">
+              <!-- <div class="select select-datepicker select-js">
                 <button class="select__current btn-reset select__current-js" type="button">Select date</button>
                 <div class="list-wrap">
-                  <ul class="select__body">c-
+                  <ul class="select__body">
                     <li class="select__option">
                       <button class="select__btn btn-reset" type="button">USA</button>
                     </li>
@@ -138,6 +106,14 @@
                       <button class="select__btn btn-reset" type="button">Ukraine</button>
                     </li>
                   </ul>
+                </div>
+              </div> -->
+
+              <div class="">
+                <input class="form-control" placeholder="dd/mm/yyyy" name="d2" #c2="ngModel" [(ngModel)]="model2"
+                  ngbDatepicker #d2="ngbDatepicker">
+                <div class="input-group-append">
+                  <button class="btn btn-outline-secondary calendar" (click)="d2.toggle()" type="button"></button>
                 </div>
               </div>
             </div>
