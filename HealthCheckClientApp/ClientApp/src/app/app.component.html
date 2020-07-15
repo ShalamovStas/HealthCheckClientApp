@@ -1,10 +1,8 @@
-<body>
-  <app-nav-menu></app-nav-menu>
-  <div class="container">
-    <router-outlet></router-outlet>
-  </div>
-
-
-  <app-footer></app-footer>
-
-</body>
+<div [ngSwitch]="navMenuType">
+  <header-base *ngSwitchCase="'BASIC'"></header-base>
+  <header-standart *ngSwitchCase="'STARNDART'"></header-standart>
+</div>
+<main>
+  <router-outlet></router-outlet>
+</main>
+<!-- <app-footer></app-footer> -->

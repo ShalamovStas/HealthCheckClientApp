@@ -1,15 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { ScriptLoaderService } from '../_services/script-loader.service';
+import { ScriptLoaderService } from '../../_services/script-loader.service';
 import { log } from 'util';
 
 declare let mLayout: any;
 @Component({
-  selector: 'app-nav-menu',
-  templateUrl: './nav-menu.component.html',
-  styleUrls: ['./nav-menu.component.scss']
+  selector: 'header-standart',
+  templateUrl: './header-standart.component.html',
+  styleUrls: ['./header-standart.component.scss']
 })
-export class NavMenuComponent implements OnInit {
+export class HeaderStandartComponent implements OnInit {
+  public showUserMenu = false;
 
   constructor(private _router: Router,
     private _script: ScriptLoaderService, ) {
@@ -56,6 +57,7 @@ export class NavMenuComponent implements OnInit {
   }
 
   logout() {
+    localStorage.removeItem("currentUser");
     this._router.navigate(['/login']);
   }
 
@@ -64,7 +66,5 @@ export class NavMenuComponent implements OnInit {
     var headerDropdown = document.querySelector('.header__dropdown');
     var headerDropdownActiveClass = 'header__dropdown--active'; // Hide Header on scroll down
     headerDropdown.classList.toggle(headerDropdownActiveClass);
-
-
   }
 }
