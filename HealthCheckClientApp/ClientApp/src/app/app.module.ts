@@ -25,6 +25,7 @@ import {AuthGuard} from './_services/guard/guard';
 import {UserService} from './_services/userService/userService';
 import { NgSelectModule } from '@ng-select/ng-select';
 import { NgOptionHighlightModule } from '@ng-select/ng-option-highlight';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 
@@ -53,6 +54,7 @@ import { NgOptionHighlightModule } from '@ng-select/ng-option-highlight';
     FormsModule,
     ReactiveFormsModule,
     NgOptionHighlightModule,
+    NgbModule,
     RouterModule.forRoot([
       { path: 'home', component: HomeComponent, pathMatch: 'full', canActivate: [AuthGuard]},
       { path: 'counter', component: CounterComponent, canActivate: [AuthGuard] },

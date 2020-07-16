@@ -8,6 +8,8 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 })
 export class SignUpComponent implements OnInit{
 
+
+
   heroForm: FormGroup;
   constructor(private fb: FormBuilder){
   }
