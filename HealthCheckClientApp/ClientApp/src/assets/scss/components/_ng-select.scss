@@ -1,0 +1,120 @@
+.c-form-group {
+  .ng-select {
+    &.ng-select-focused:not(.ng-select-opened) > .ng-select-container {
+      border: $default-border;
+      box-shadow: none;
+    }
+
+
+    .ng-select-container {
+      height: $input-height;
+      padding-left: $input-indent-x;
+
+      font-size: $font-size-medium;
+      color: $black;
+      background-color: $white;
+      border: $default-border;
+      border-radius: $border-radius !important;
+      cursor: pointer;
+
+      @include media(">xlarge") {
+        font-size: $base-font-size;;
+      }
+
+      &:focus {
+        border-color: transparent;
+      }
+
+      .ng-input {
+        padding: 0;
+
+        input {
+          appearance: none;
+        }
+      }
+
+      .ng-value-container {
+        padding: 0;
+      }
+
+      .ng-placeholder {
+        color: $secondary;
+        font-size: $font-size-medium;
+
+        @include media(">=xlarge") {
+          font-size: $base-font-size;
+        }
+      }
+    }
+    .ng-dropdown-panel {
+      top: 62px;
+      border: 0;
+      .ng-dropdown-panel-items {
+        background-color: $white;
+        border-radius: $border-radius;
+        box-shadow: $shadow;
+        border: 1px solid transparent;
+      }
+
+      .scroll-host {
+        &::-webkit-scrollbar {
+          width: 6px;
+        }
+
+        /* Track */
+        &::-webkit-scrollbar-track {
+          background-color: $bg-body;
+          border-radius: 20px;
+        }
+
+        /* Handle */
+        &::-webkit-scrollbar-thumb {
+          background-color: $secondary-light;
+          border-radius: 20px;
+        }
+
+        /* Handle on hover */
+        &::-webkit-scrollbar-thumb:hover {
+          background-color: $secondary-light;
+        }
+      }
+
+      .ng-option {
+        color: $black;
+        &.ng-option-selected,
+        &.ng-option-marked {
+          background-color: transparent;
+        }
+      }
+      .ng-option-label {
+        font-weight: normal !important;
+      }
+
+    }
+
+    .ng-arrow-wrapper {
+      width: auto;
+      padding: 0;
+      position: absolute;
+      top: 50%;
+      right: 26px;
+      transform: translateY(-50%);
+
+      @include media(">=medium") {
+        right: 22px;
+      }
+      @include media(">=xlarge") {
+        right: 19px;
+      }
+      .ng-arrow {
+        top: 0;
+        border-color: $black transparent transparent;
+        border-width: 6px 6px 3px;
+      }
+    }
+
+    .ng-clear-wrapper {
+      display: none;
+    }
+  }
+}

@@ -29,6 +29,10 @@
   border-radius: $border-radius;
   appearance: none;
 
+  @include media(">=xlarge") {
+    font-size: $base-font-size;
+  }
+
   &::placeholder {
     font-size: $font-size-medium;
     color: $col-placeholder;
@@ -38,10 +42,7 @@
   }
 }
 
-input::-ms-reveal,
-input::-ms-clear {
-  display: none;
-}
+
 
 .c-form-group__label {
   margin-bottom: $input-holder-margin / 2; // 10px

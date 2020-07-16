@@ -20,7 +20,7 @@
         </li>
       </ul>
 
-      <form class="sign-up__form" name="signUpForm">
+      <form [formGroup]="heroForm" class="sign-up__form" name="signUpForm">
 
         <div class="form-group-wrap form-group-wrap-1">
           <div class="c-form-group">
@@ -31,8 +31,8 @@
 
           <div class="c-form-group">
             <label class="c-form-group__label form-group__label--password" for="password">Password</label>
-            <label class="c-form-group__label form-group__label--password form-group__label--error" for="password">Weak
-              password</label>
+            <label class="c-form-group__label form-group__label--password form-group__label--error"
+              for="password">Weak password</label>
 
             <div class="input-holder">
               <input type="password" class="c-form-control" id="password" name="password">
@@ -60,118 +60,147 @@
         </div>
 
         <div class="form-group-wrap form-group-wrap-3">
+<!--            <div class="c-form-group">-->
+<!--              <label class="c-form-group__label">Sex</label>-->
+
+<!--              &lt;!&ndash; <div class="select select-js">-->
+<!--                <button class="select__current btn-reset select__current-js" type="button">Select sex</button>-->
+<!--                <div class="list-wrap">-->
+<!--                  <ul class="select__body">-->
+<!--                    <li class="select__option">-->
+<!--                      <button class="select__btn btn-reset" type="button">Male</button>-->
+<!--                    </li>-->
+<!--                    <li class="select__option">-->
+<!--                      <button class="select__btn btn-reset" type="button">Female</button>-->
+<!--                    </li>-->
+<!--                  </ul>-->
+<!--                </div>-->
+<!--              </div> &ndash;&gt;-->
+
+
+
+<!--              <div ngbDropdown class="select">-->
+<!--                &lt;!&ndash; <button class="btn btn-outline-primary" id="dropdownSex" ngbDropdownToggle>Toggle dropdown</button> &ndash;&gt;-->
+<!--                <button class="select__current btn-reset" id="dropdownSex" ngbDropdownToggle>Select sex</button>-->
+<!--                <div ngbDropdownMenu aria-labelledby="dropdownSex">-->
+<!--                  <div class="list-wrap">-->
+<!--                    <ul class="select__body">-->
+<!--                      <li ngbDropdownItem class="select__option">-->
+<!--                        <button class="select__btn btn-reset" type="button">Male</button>-->
+<!--                      </li>-->
+<!--                      <li ngbDropdownItem class="select__option">-->
+<!--                        <button class="select__btn btn-reset" type="button">Female</button>-->
+<!--                      </li>-->
+<!--                    </ul>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
+
+
+          <!-- <select class="c-form-group" style="display: block;
+          width: 100%;
+          height: 60px;
+          padding-left: 16px;
+          padding-right: 16px;
+          margin-bottom: 10px;
+          font-size: 16px;
+          color: #191B1C;
+          background-color: #fff;
+          border: 1px solid #9EB3B9;
+          border-radius: 5px;" id="country" name="country" required="">
+            <option disabled="" selected="" value="">Select sex</option>
+            <option value="4ab96ee4-cc84-4f0e-bbaf-c6e3075107d1">Male</option>
+            <option value="a7b79c47-566e-48bb-b78b-1168284d0e99">Female</option>
+          </select> -->
+
           <div class="c-form-group">
             <label class="c-form-group__label">Sex</label>
-
-            <!-- original Element -->
-            <div class="select select-js">
-              <button class="select__current btn-reset select__current-js" type="button">Select sex</button>
-              <div class="list-wrap">
-                <ul class="select__body">
-                  <li class="select__option">
-                    <button class="select__btn btn-reset" type="button">Male</button>
-                  </li>
-                  <li class="select__option">
-                    <button class="select__btn btn-reset" type="button">Female</button>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
+            <ng-select  appearance="outline" #agreeSelect labelForId="yesno"
+                        [searchable]="false" formControlName="agree"
+                        placeholder="Select sex"
+            >
+              <ng-option [value]="true">Male</ng-option>
+              <ng-option [value]="false">Female</ng-option>
+            </ng-select>
           </div>
 
+<!--            <p class="sh-custom">TEST</p>-->
 
           <!-- need to change to datepicker -->
           <div class="c-form-group">
             <label class="c-form-group__label">Date of birth</label>
 
-            <!-- <div class="select select-datepicker select-js">
-                <button class="select__current btn-reset select__current-js" type="button">Select date</button>
-                <div class="list-wrap">
-                  <ul class="select__body">
-                    <li class="select__option">
-                      <button class="select__btn btn-reset" type="button">USA</button>
-                    </li>
-                    <li class="select__option">
-                      <button class="select__btn btn-reset" type="button">Ukraine</button>
-                    </li>
-                  </ul>
-                </div>
-              </div> -->
-
-            <div class="select select-datepicker">
-              <input class="select__current btn-reset" placeholder="dd/mm/yyyy" name="d2" #c2="ngModel"
-                [(ngModel)]="model2" ngbDatepicker #d2="ngbDatepicker" (click)="d2.toggle()">
+            <input class="form-control" placeholder="yyyy-mm-dd"
+                   name="dp" [(ngModel)]="model" ngbDatepicker #d="ngbDatepicker">
+            <div class="input-group-append">
+              <button class="btn btn-outline-secondary calendar" (click)="d.toggle()" type="button"></button>
             </div>
 
+<!--            <div class="select select-datepicker select-js">-->
+<!--              <button class="select__current btn-reset select__current-js" type="button">Select date</button>-->
+<!--              <div class="list-wrap">-->
+<!--                <ul class="select__body">-->
+<!--                  <li class="select__option">-->
+<!--                    <button class="select__btn btn-reset" type="button">USA</button>-->
+<!--                  </li>-->
+<!--                  <li class="select__option">-->
+<!--                    <button class="select__btn btn-reset" type="button">Ukraine</button>-->
+<!--                  </li>-->
+<!--                </ul>-->
+<!--              </div>-->
+<!--            </div>-->
           </div>
           <!-- need to change to datepicker -->
         </div>
 
-
-
         <div class="form-group-wrap form-group-wrap-4">
           <div class="c-form-group">
             <label class="c-form-group__label">Country</label>
-
-            <div class="select select-js">
-              <button class="select__current btn-reset select__current-js" type="button">Select country</button>
-              <div class="list-wrap">
-                <ul class="select__body scroll-bar">
-                  <li class="select__option">
-                    <button class="select__btn btn-reset" type="button">Tuvalu</button>
-                  </li>
-                  <li class="select__option">
-                    <button class="select__btn btn-reset" type="button">Uganda</button>
-                  </li>
-                  <li class="select__option">
-                    <button class="select__btn btn-reset" type="button">Ukraine</button>
-                  </li>
-                  <li class="select__option">
-                    <button class="select__btn btn-reset" type="button">United Arab Emirates</button>
-                  </li>
-                  <li class="select__option">
-                    <button class="select__btn btn-reset" type="button">United Kingdom</button>
-                  </li>
-                  <li class="select__option">
-                    <button class="select__btn btn-reset" type="button">United States</button>
-                  </li>
-                  <li class="select__option">
-                    <button class="select__btn btn-reset" type="button">Uruguay</button>
-                  </li>
-                  <li class="select__option">
-                    <button class="select__btn btn-reset" type="button">Uzbekistan</button>
-                  </li>
-                </ul>
-              </div>
-            </div>
+            <ng-select  appearance="outline" #agreeSelect labelForId="yesno"
+                        [searchable]="false" formControlName="agree"
+                        placeholder="Select country"
+            >
+              <ng-option>Tuvalu</ng-option>
+              <ng-option>Uganda</ng-option>
+              <ng-option>Uganda</ng-option>
+              <ng-option>Uganda</ng-option>
+              <ng-option>Uganda</ng-option>
+              <ng-option>Uganda</ng-option>
+              <ng-option>Uganda</ng-option>
+              <ng-option>Uganda</ng-option>
+              <ng-option>Uganda</ng-option>
+              <ng-option>Uganda</ng-option>
+              <ng-option>Uganda</ng-option>
+              <ng-option>Uganda</ng-option>
+              <ng-option>Uganda</ng-option>
+              <ng-option>Uganda</ng-option>
+              <ng-option>Uganda</ng-option>
+            </ng-select>
           </div>
 
           <div class="c-form-group hide-block">
             <label class="c-form-group__label">State</label>
-
-            <div class="select select-js">
-              <button class="select__current btn-reset select__current-js" type="button">Select state</button>
-              <div class="list-wrap">
-                <ul class="select__body scroll-bar">
-                  <li class="select__option">
-                    <button class="select__btn btn-reset" type="button">Alabama</button>
-                  </li>
-                  <li class="select__option">
-                    <button class="select__btn btn-reset" type="button">Alaska</button>
-                  </li>
-                  <li class="select__option">
-                    <button class="select__btn btn-reset" type="button">Kansas</button>
-                  </li>
-                  <li class="select__option">
-                    <button class="select__btn btn-reset" type="button">Minnesota</button>
-                  </li>
-                  <li class="select__option">
-                    <button class="select__btn btn-reset" type="button">Texas</button>
-                  </li>
-                </ul>
-              </div>
-            </div>
+            <ng-select  appearance="outline" #agreeSelect labelForId="yesno"
+                        [searchable]="false" formControlName="agree"
+                        placeholder="Select state"
+            >
+              <ng-option>Tuvalu</ng-option>
+              <ng-option>Uganda</ng-option>
+              <ng-option>Uganda</ng-option>
+              <ng-option>Uganda</ng-option>
+              <ng-option>Uganda</ng-option>
+              <ng-option>Uganda</ng-option>
+              <ng-option>Uganda</ng-option>
+              <ng-option>Uganda</ng-option>
+              <ng-option>Uganda</ng-option>
+              <ng-option>Uganda</ng-option>
+              <ng-option>Uganda</ng-option>
+              <ng-option>Uganda</ng-option>
+              <ng-option>Uganda</ng-option>
+              <ng-option>Uganda</ng-option>
+              <ng-option>Uganda</ng-option>
+            </ng-select>
           </div>
 
           <div class="c-form-group">
@@ -184,10 +213,10 @@
                   <span class="custom-checkbox"></span>
                 </label>
                 <div class="sign-up__form-text">I accept HealthCheck’s <button
-                    class="btn-privacy btn-reset с-text-primary font-weight-semi btn-privacy-js" type="button"
-                    (click)="openModalPrivacy()">Terms and Conditions</button> and
+                  class="btn-privacy btn-reset с-text-primary font-weight-semi btn-privacy-js" type="button"
+                  (click)="openModalPrivacy()">Terms and Conditions</button> and
                   <button class="btn-privacy btn-reset с-text-primary font-weight-semi btn-privacy-js" type="button"
-                    (click)="openModalPrivacy()">Privacy Policy</button>
+                          (click)="openModalPrivacy()">Privacy Policy</button>
                 </div>
               </div>
             </div>
@@ -199,6 +228,97 @@
             </div>
           </div>
         </div>
+
+
+<!--          <div class="form-group-wrap form-group-wrap-4">-->
+<!--            <div class="c-form-group">-->
+<!--              <label class="c-form-group__label">Country</label>-->
+
+<!--              <div class="select select-js">-->
+<!--                <button class="select__current btn-reset select__current-js" type="button">Select country</button>-->
+<!--                <div class="list-wrap">-->
+<!--                  <ul class="select__body scroll-bar">-->
+<!--                    <li class="select__option">-->
+<!--                      <button class="select__btn btn-reset" type="button">Tuvalu</button>-->
+<!--                    </li>-->
+<!--                    <li class="select__option">-->
+<!--                      <button class="select__btn btn-reset" type="button">Uganda</button>-->
+<!--                    </li>-->
+<!--                    <li class="select__option">-->
+<!--                      <button class="select__btn btn-reset" type="button">Ukraine</button>-->
+<!--                    </li>-->
+<!--                    <li class="select__option">-->
+<!--                      <button class="select__btn btn-reset" type="button">United Arab Emirates</button>-->
+<!--                    </li>-->
+<!--                    <li class="select__option">-->
+<!--                      <button class="select__btn btn-reset" type="button">United Kingdom</button>-->
+<!--                    </li>-->
+<!--                    <li class="select__option">-->
+<!--                      <button class="select__btn btn-reset" type="button">United States</button>-->
+<!--                    </li>-->
+<!--                    <li class="select__option">-->
+<!--                      <button class="select__btn btn-reset" type="button">Uruguay</button>-->
+<!--                    </li>-->
+<!--                    <li class="select__option">-->
+<!--                      <button class="select__btn btn-reset" type="button">Uzbekistan</button>-->
+<!--                    </li>-->
+<!--                  </ul>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
+
+<!--            <div class="c-form-group hide-block">-->
+<!--              <label class="c-form-group__label">State</label>-->
+
+<!--              <div class="select select-js">-->
+<!--                <button class="select__current btn-reset select__current-js" type="button">Select state</button>-->
+<!--                <div class="list-wrap">-->
+<!--                  <ul class="select__body scroll-bar">-->
+<!--                    <li class="select__option">-->
+<!--                      <button class="select__btn btn-reset" type="button">Alabama</button>-->
+<!--                    </li>-->
+<!--                    <li class="select__option">-->
+<!--                      <button class="select__btn btn-reset" type="button">Alaska</button>-->
+<!--                    </li>-->
+<!--                    <li class="select__option">-->
+<!--                      <button class="select__btn btn-reset" type="button">Kansas</button>-->
+<!--                    </li>-->
+<!--                    <li class="select__option">-->
+<!--                      <button class="select__btn btn-reset" type="button">Minnesota</button>-->
+<!--                    </li>-->
+<!--                    <li class="select__option">-->
+<!--                      <button class="select__btn btn-reset" type="button">Texas</button>-->
+<!--                    </li>-->
+<!--                  </ul>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
+
+<!--            <div class="c-form-group">-->
+<!--              <div class="form-group-accept">-->
+<!--                <label class="c-form-group__label" for="facilityCode">Facility code</label>-->
+<!--                <input type="text" class="c-form-control" id="facilityCode" name="facilityCode">-->
+<!--                <div class="d-flex align-items-center">-->
+<!--                  <label class="custom-checkbox-label">-->
+<!--                    <input class="common-checkbox" type="checkbox">-->
+<!--                    <span class="custom-checkbox"></span>-->
+<!--                  </label>-->
+<!--                  <div class="sign-up__form-text">I accept HealthCheck’s <button-->
+<!--                      class="btn-privacy btn-reset с-text-primary font-weight-semi btn-privacy-js" type="button"-->
+<!--                      (click)="openModalPrivacy()">Terms and Conditions</button> and-->
+<!--                    <button class="btn-privacy btn-reset с-text-primary font-weight-semi btn-privacy-js" type="button"-->
+<!--                      (click)="openModalPrivacy()">Privacy Policy</button>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--              <div class="btn-holder mt-0 mb-0">-->
+<!--                <button class="c-btn c-btn-primary mb-2" type="submit">Sign up</button>-->
+<!--                <div class="form-subtext">-->
+<!--                  <span>Already have an account?&nbsp;</span><a class="с-text-primary" routerLink="/login">Sign in</a>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
 
       </form>
 

@@ -1,66 +1,66 @@
-  <div class="intro">
-    <div class="container">
-      <div class="intro__inner intro__inner-indent">
-        <h1 class="main-title">Being <span class="с-text-primary">healthy</span>
-          is being <span class="с-text-primary">safe</span></h1>
+<div class="intro">
+  <div class="container">
+    <div class="intro__inner intro__inner-indent">
+      <h1 class="main-title">Being <span class="с-text-primary">healthy</span>
+        is being <span class="с-text-primary">safe</span></h1>
 
-        <div class="intro__text-holder text-holder">
-          <p>Check your health daily and become a superhero using HealthCheck</p>
+      <div class="intro__text-holder text-holder">
+        <p>Check your health daily and become a superhero using HealthCheck</p>
+      </div>
+      <div class="intro__img-holder">
+        <img src="../../assets/images/illustration.jpg"
+          alt="two boys and two girls are wearing in different clothes and talking to each other">
+      </div>
+
+      <span class="sub-text">Sign in with your social network or email:</span>
+      <ul class="social-list">
+        <li class="social-list__item">
+          <a class="social-list__link bg-gray-100" href="#"><i class="icon icon-facebook facebook-bg"></i></a>
+        </li>
+        <li class="social-list__item">
+          <a class="social-list__link bg-gray-100" href="#">
+            <img src="../../assets/images/svg-icons/icon_google.svg" alt="icon google logo">
+          </a>
+        </li>
+        <li class="social-list__item">
+          <a class="social-list__link bg-gray-100" href="#"><i class="icon icon-twitter twitter-bg"></i></a>
+        </li>
+        <li class="social-list__item">
+          <a class="social-list__link bg-gray-100" href="#"><i class="icon icon-apple apple-bg"></i></a>
+        </li>
+      </ul>
+
+
+      <!-- Please remove class - d-none from this block to show the error-block -->
+      <div class="error-block d-none">
+        <i class="icon icon-warning"></i>
+        <span>Incorrect email and password</span>
+      </div>
+      <!-- Please uncomment this block to show the error-block -->
+
+      <form name="signInForm">
+        <div class="c-form-group c-form-group--width">
+          <label class="c-form-group__label" for="email">Email</label>
+          <input type="email" class="c-form-control" id="email">
         </div>
-        <div class="intro__img-holder">
-          <img src="../../assets/images/illustration.jpg"
-            alt="two boys and two girls are wearing in different clothes and talking to each other">
-        </div>
-
-        <span class="sub-text">Sign in with your social network or email:</span>
-        <ul class="social-list">
-          <li class="social-list__item">
-            <a class="social-list__link bg-gray-100" href="#"><i class="icon icon-facebook facebook-bg"></i></a>
-          </li>
-          <li class="social-list__item">
-            <a class="social-list__link bg-gray-100" href="#">
-              <img src="../../assets/images/svg-icons/icon_google.svg" alt="icon google logo">
-            </a>
-          </li>
-          <li class="social-list__item">
-            <a class="social-list__link bg-gray-100" href="#"><i class="icon icon-twitter twitter-bg"></i></a>
-          </li>
-          <li class="social-list__item">
-            <a class="social-list__link bg-gray-100" href="#"><i class="icon icon-apple apple-bg"></i></a>
-          </li>
-        </ul>
-
-
-        <!-- Please remove class - d-none from this block to show the error-block -->
-        <div class="error-block d-none">
-          <i class="icon icon-warning"></i>
-          <span>Incorrect email and password</span>
-        </div>
-        <!-- Please uncomment this block to show the error-block -->
-
-        <form name="signInForm">
-          <div class="c-form-group c-form-group--width">
-            <label class="c-form-group__label" for="email">Email</label>
-            <input type="email" class="c-form-control" id="email">
-          </div>
-          <div class="c-form-group c-form-group--width">
-            <label class="c-form-group__label" for="password">Password</label>
-            <div class="input-holder">
-              <input type="password" class="c-form-control" id="password">
-              <button class="btn-show-password btn-reset" type="button"></button>
-            </div>
-            <div class="form-subtext">
-              <span>Forgot your&nbsp;</span><a class="с-text-primary" routerLink="/restore-password">password</a>?
-            </div>
-          </div>
-          <div class="btn-holder">
-            <button class="c-btn c-btn-primary" type="button" (click)="signIn()">Sign in</button>
+        <div class="c-form-group c-form-group--width">
+          <label class="c-form-group__label" for="password">Password</label>
+          <div class="input-holder">
+            <input type="password" class="c-form-control" id="password">
+            <button class="btn-show-password btn-reset" type="button"></button>
           </div>
           <div class="form-subtext">
-            <span>Don’t have an account yet?&nbsp;</span><a class="с-text-primary" routerLink="/sign-up">Sign up</a>
+            <span>Forgot your&nbsp;</span><a class="с-text-primary" routerLink="/restore-password">password</a>?
           </div>
-        </form>
-      </div>
+        </div>
+        <div class="btn-holder">
+          <button class="c-btn c-btn-primary" type="button" (click)="signIn()">Sign in</button>
+        </div>
+        <div class="form-subtext">
+          <span>Don’t have an account yet?&nbsp;</span><a class="с-text-primary" routerLink="/sign-up">Sign up</a>
+        </div>
+      </form>
     </div>
-
   </div>
+
+</div>
