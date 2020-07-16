@@ -71,7 +71,7 @@
 
 }
 
-@each $btn-class, $color in $custom-colors {
+@each $btn-class, $color in $colors {
   .c-btn-#{$btn-class} {
     font-weight: 800;
     color: $white;

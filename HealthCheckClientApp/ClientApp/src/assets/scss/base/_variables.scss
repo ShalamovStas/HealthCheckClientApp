@@ -51,9 +51,9 @@ $light:   $gray-100;
 $success: $green;
 $warning: $yellow;
 
-$custom-colors: (
-  'black': $black,
-  'white': $white,
+$colors: (
+  "black": $black,
+  "white": $white,
   "primary": $primary,
   "danger":  $danger,
   "light":   $light,

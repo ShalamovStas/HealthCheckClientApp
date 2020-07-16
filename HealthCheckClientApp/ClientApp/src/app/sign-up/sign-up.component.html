@@ -106,15 +106,12 @@
             </ng-select>
           </div>
 
-          <!--            <p class="sh-custom">TEST</p>-->
-
-          <!-- need to change to datepicker -->
           <div class="c-form-group">
             <label class="c-form-group__label">Date of birth</label>
 
-            <div class="select select-datepicker">
-              <input class="select select-datepicker" placeholder="yyyy-mm-dd" name="dp" (click)="d.toggle()"
-                ngbDatepicker #d="ngbDatepicker">
+            <div class="datepicker-wrap position-relative">
+              <input class="datepicker" placeholder="Select date" name="dp" (click)="d.toggle()"
+                     ngbDatepicker #d="ngbDatepicker" readonly>
             </div>
             <!-- <div class="input-group-append">
               <button class="btn btn-outline-secondary calendar" (click)="d.toggle()" type="button"></button>
@@ -202,7 +199,7 @@
             <div class="btn-holder mt-0 mb-0">
               <button class="c-btn c-btn-primary mb-2" type="submit">Sign up</button>
               <div class="form-subtext">
-                <span>Already have an account?&nbsp;</span><a class="с-text-primary" routerLink="/login">Sign in</a>
+                <span>Already have an account?&nbsp;</span><a class="c-text-primary" routerLink="/login">Sign in</a>
               </div>
             </div>
           </div>
