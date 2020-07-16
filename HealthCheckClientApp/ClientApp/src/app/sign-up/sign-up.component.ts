@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { NgbDate, NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-sign-up',
@@ -8,6 +7,8 @@ import { NgbDate, NgbModule } from '@ng-bootstrap/ng-bootstrap';
   styleUrls: ['sign-up.component.scss']
 })
 export class SignUpComponent implements OnInit{
+
+
 
   heroForm: FormGroup;
   constructor(private fb: FormBuilder){
