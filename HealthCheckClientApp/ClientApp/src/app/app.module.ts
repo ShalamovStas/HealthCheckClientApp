@@ -21,11 +21,15 @@ import {NgbDropdownModule, NgbTabsetModule, NgbTooltipModule} from '@ng-bootstra
 import {ScriptLoaderService} from './_services/script-loader.service';
 import {NgbdPopoverBasicModule} from './layout/popover/popover-basic.module';
 import {DropdownComponent} from './layout/dropdown/dropdown.component';
-import {AuthGuard} from './_services/guard/guard';
-import {UserService} from './_services/userService/userService';
+import {AuthGuard} from './_services/guard.service';
+import {UserService} from './_services/user.service';
 import { NgSelectModule } from '@ng-select/ng-select';
 import { NgOptionHighlightModule } from '@ng-select/ng-option-highlight';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import {QuestionWizardService} from './_services/questionWizard.service' 
+import {QuestionWizardComponent} from './question-wizard/question-wizard.component' 
+import {DataSharingService} from './_services/data-sharing.service' 
+import {HealthCheckResultComponent} from './health-check-result/health-check-result.component' 
 
 
 
@@ -47,6 +51,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     ProfileComponent,
     LanguageSelectorComponent,
     DropdownComponent,
+    QuestionWizardComponent,
+    HealthCheckResultComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -64,6 +70,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
       { path: 'sign-up', component: SignUpComponent },
       { path: 'restore-password', component: RestorePasswordComponent },
       { path: 'profile', component: ProfileComponent, canActivate: [AuthGuard] },
+      { path: 'question-wizard', component: QuestionWizardComponent, canActivate: [AuthGuard] },
+      { path: 'health-check-result', component: HealthCheckResultComponent, canActivate: [AuthGuard] },
       { path: '**', component: LoginComponent },
     ]),
     // ng-bootstrap modules
@@ -80,6 +88,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     ScriptLoaderService, 
     AuthGuard, 
     UserService,
+    QuestionWizardService,
+    DataSharingService
   ],
   bootstrap: [AppComponent]
 })

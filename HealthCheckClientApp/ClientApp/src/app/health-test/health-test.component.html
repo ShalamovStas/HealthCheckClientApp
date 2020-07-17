@@ -1,16 +1,16 @@
+<div class="intro">
+  <div class="container">
+    <div class="intro__inner intro__inner-indent--small">
+      <h2 class="secondary-title mb-1">HealthCheck</h2>
 
-  <div class="intro">
-    <div class="container">
-      <div class="intro__inner intro__inner-indent--small">
-        <h2 class="secondary-title mb-1">HealthCheck</h2>
+      <div class="text-holder holder--bottom-indent">
+        <span>Please answer questions truthfully and to the best of your ability</span>
+      </div>
 
-        <div class="text-holder holder--bottom-indent">
-          <span>Please answer questions truthfully and to the best of your ability</span>
-        </div>
-
-        <div class="card card-test">
-          <h2 class="secondary-title card-test__title">Select your facility</h2>
-          <div class="c-form-group c-form-group--width">
+      <div class="card card-test">
+        <h2 class="secondary-title card-test__title">Select your facility</h2>
+        <!-- Original Design -->
+        <!-- <div class="c-form-group c-form-group--width">
             <div class="select select-js">
               <button class="select__current btn-reset select__current-js" type="button">Corporate HQ</button>
               <div class="list-wrap">
@@ -24,14 +24,23 @@
                 </ul>
               </div>
             </div>
-          </div>
-          <div class="btn-holder mb-0">
-            <button class="c-btn c-btn-primary" type="button">Next</button>
-          </div>
+          </div> -->
+
+        <div class="c-form-group c-form-group--width">
+          <ng-select appearance="outline" #agreeSelect [searchable]="false" placeholder="Select your facility"
+            [(ngModel)]='selectFacility' [items]="facilityList">
+          </ng-select>
         </div>
-        <span class="d-none d-block-xlarge font-size-additional">Your answers are confidential and will keep our workplace safe</span>
-
+        <div class="btn-holder mb-0">
+          <button class="c-btn c-btn-primary" type="button"
+            [ngStyle]="{'background-color': selectFacility ? '#00ACCD' : '#babbbb', 'box-shadow': selectFacility ? '0px 4px 10px rgba(0, 172, 205, 0.15)' : '0px 4px 10px rgba(184, 187, 188, 0.15)'}"
+            (click)='next()' [disabled]='!selectFacility' routerLink="/question-wizard">Next</button>
+        </div>
       </div>
-    </div>
 
+      <!-- <app-question-card *ngIf='questionList'></app-question-card> -->
+      <span class="d-none d-block-xlarge font-size-additional">Your answers are confidential and will keep our workplace safe</span>
+    </div>
   </div>
+
+</div>

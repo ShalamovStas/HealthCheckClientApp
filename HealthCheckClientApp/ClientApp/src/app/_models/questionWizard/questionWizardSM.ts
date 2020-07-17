@@ -1,30 +1,26 @@
-export enum State {
-    ReadyToCheck,
-    InProgress,
-    Finished
-}
+import { State, TestResultModel, QuestionType, QuestionModelBase } from './questionWizardModels'
 
 export class QuestionWizardStateMachine {
     private state: State;
     private currentQuestionIndex: number;
-    private answers: Map<number, boolean>
 
-    constructor(private questions: Array<string>) {
-        this.init();
-        this.stateReadyToCheck();
+    constructor(private questions: Array<QuestionModelBase>) {
+        this.currentQuestionIndex = -1;
     }
 
-    init(){
-        this.answers = new Map<number, boolean>();
+    getCurrentQuestion(): QuestionModelBase {
+        if (this.state == State.Finished)
+            return undefined;
+        return this.questions[this.currentQuestionIndex];
     }
 
     stateReadyToCheck() {
         this.currentQuestionIndex = 0;
-        this.answers.clear();
     }
 
-    handleAnswer(answer: boolean) {
-        this.answers.set(this.currentQuestionIndex, answer);
+    handleAnswer(userAnswer: any) {
+        let currentQuestion = this.questions[this.currentQuestionIndex];
+        currentQuestion.answer = userAnswer;
     }
 
     stateNextQuestion() {
@@ -39,17 +35,22 @@ export class QuestionWizardStateMachine {
         this.currentQuestionIndex--;
         if (this.currentQuestionIndex <= 0) {
             this.currentQuestionIndex = 0;
-            this.stateReadyToCheck();
             return;
         }
-        this.answers.delete(this.currentQuestionIndex);
+        let currentQuestion = this.questions[this.currentQuestionIndex];
+        currentQuestion.answer = undefined;
     }
 
     getState(): State {
         return this.state;
     }
 
+    ifTestIsFinished(): boolean {
+        return this.state == State.Finished;
+    }
+
     private setState(value: State) {
         this.state = value;
     }
 }
+
